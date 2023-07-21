@@ -59,6 +59,7 @@ public class Arr{
 
             s++;
             e--;
+            
 
         }
         printArray(arr);
