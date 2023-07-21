@@ -1,5 +1,7 @@
 //BASIC TO ADVANCED ARRAY QUESTIONS
 import java.util.*;
+
+import javax.swing.plaf.synth.SynthSpinnerUI;
 public class Arr{
 
     //1.Printing of Array Elements
@@ -191,6 +193,23 @@ public class Arr{
     }
 
 
+
+    //13.Triplets of array satisfying a COndition
+    public static List<List<Integer>> triplets(int arr[]){
+        List<List<Integer>> res = new ArrayList <List<Integer>>();
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                for(int k=j+1;k<arr.length;k++){
+                    if((i!=j ||j!=k || k!=i) && (arr[i]+arr[j]+arr[k]==0)){
+                        
+                    }
+                }
+            }
+        }
+        
+    }
+
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         // int arr2[] = {1,2,5,6,8,}; //A way to create an array
@@ -261,9 +280,14 @@ public class Arr{
         /*  *******************************************       Question : 12                 ************************************************* */
         //12.Rotated Sorted Array
         //Given the array nums after the possible rotation and an integer target, returnthe index oftarget if it is in nums, or -1   if it is not in nums
-        int target = 5;
-        System.out.println("The target eleemtn is found at Index: "+RotSortArr(arr,target));
+        // int target = 5;
+        // System.out.println("The target eleemtn is found at Index: "+RotSortArr(arr,target));
 
+
+        /*  *******************************************       Question : 13                 ************************************************* */
+        //13.Given an integer array nums, return all the triplets [nums[i], nums[j],  nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.Notice that the solution set must not contain duplicate triplets
+        //13.FInd the Triplets
+        // System.out.print(triplets(arr));
 
 
     }
