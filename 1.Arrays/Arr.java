@@ -149,7 +149,18 @@ public class Arr{
     }
 
 
-
+    //11.Find Duplicate in An Array
+    public static boolean Dup(int arr[]){
+        int s=0;
+        int e=arr.length-1;
+        while(s<e){
+            if(arr[s]==arr[e]){
+                return true;
+            }
+            e--;
+        }
+        return false;
+    }
 
 
     public static void main(String[] args) {
@@ -212,6 +223,11 @@ public class Arr{
         //10.Best time to buy and sell Stocks
         // System.out.println("The Maximum Profit Acheived is: "+stocks(arr));
 
+
+        /*  *******************************************       Question : 11.                 ************************************************* */
+        //11.Find Duplicate in Array
+        // Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct
+        System.out.println(Dup(arr));
     }
 }
 
