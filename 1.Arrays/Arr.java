@@ -59,10 +59,20 @@ public class Arr{
 
             s++;
             e--;
-            
+
 
         }
         printArray(arr);
+    }
+
+    //6.Pairs in Array
+    public static void Pairs(int arr[]){
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                System.out.print("( "+arr[i]+" , "+arr[j]+" )");
+            }
+            System.out.println();
+        }
     }
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -100,7 +110,14 @@ public class Arr{
 
         /*  *******************************************       Question : 5                 ************************************************* */
         //5.Reverse an Array
-        RevArr(arr);
+        // RevArr(arr);
+
+        /*  *******************************************       Question : 6                 ************************************************* */
+        //6.Pairs in Array
+        // Pairs(arr);
+
+
+        /*  *******************************************       Question : 7                 ************************************************* */
 
     }
 }
