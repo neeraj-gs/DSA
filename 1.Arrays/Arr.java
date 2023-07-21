@@ -40,6 +40,29 @@ public class Arr{
         }
         return -1;
     }
+
+    //4.Minimum and Maximum Elemetn in Array
+    public static void MinMax(int arr[]){
+        Arrays.sort(arr);
+        System.out.println("Maximum Element is: "+arr[arr.length-1]+" and the Minimum Eleemtn is: "+arr[0]);
+    }
+
+    //5.Reverse an Array:
+    public static void RevArr(int arr[]){
+        int s=0;
+        int e=arr.length-1;
+        while(s<e){
+            //swap
+            int temp = arr[s];
+            arr[s] = arr[e];
+            arr[e]=temp;
+
+            s++;
+            e--;
+
+        }
+        printArray(arr);
+    }
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         // int arr2[] = {1,2,5,6,8,}; //A way to create an array
@@ -58,8 +81,8 @@ public class Arr{
 
         /*  *******************************************       Question : 2                 ************************************************* */
         //2.Linear Search
-        System.out.print("Enter Key to Search: ");
-        int key =s.nextInt();
+        // System.out.print("Enter Key to Search: ");
+        // int key =s.nextInt();
         // System.out.println("Key found at index: "+LinSearch(arr,key));
 
 
@@ -67,7 +90,16 @@ public class Arr{
         /*  *******************************************       Question : 3                 ************************************************* */
         //3.Binary Search
         //ONly condition to apply binary search the eleemtns have to be sorted
-        System.out.println("Key found at index: "+BinSearch(arr,key));
+        // System.out.println("Key found at index: "+BinSearch(arr,key));
+
+
+        /*  *******************************************       Question : 4                 ************************************************* */
+        //4.Largest and Smallest Element in Array
+        // MinMax(arr);
+
+        /*  *******************************************       Question : 5                 ************************************************* */
+        //5.Reverse an Array
+        RevArr(arr);
 
     }
 }
