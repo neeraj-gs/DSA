@@ -162,6 +162,34 @@ public class Arr{
         return false;
     }
 
+    //12.Rotated Sorted Array
+    public static int RotSortArr(int arr[],int target){
+        int s=0;
+        int e = arr.length-1;
+        while(s<=e){
+            int m = (s+e)/2;
+            if(target == arr[m]){
+                return m;
+            }
+            else if(arr[s]<=arr[m]){
+                if(target>=arr[s]&&target<arr[m]){
+                    e=m-1;
+                }
+                else{
+                    s=m+1;
+                }
+            }
+            else{
+                if(target >arr[m]&& target<=arr[e]){
+                    s=m+1;
+                }else{
+                    e=m-1;
+                }
+            }
+        }
+        return -1;
+    }
+
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -227,7 +255,17 @@ public class Arr{
         /*  *******************************************       Question : 11.                 ************************************************* */
         //11.Find Duplicate in Array
         // Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct
-        System.out.println(Dup(arr));
+        // System.out.println(Dup(arr));
+
+
+        /*  *******************************************       Question : 12                 ************************************************* */
+        //12.Rotated Sorted Array
+        //Given the array nums after the possible rotation and an integer target, returnthe index oftarget if it is in nums, or -1   if it is not in nums
+        int target = 5;
+        System.out.println("The target eleemtn is found at Index: "+RotSortArr(arr,target));
+
+
+
     }
 }
 
