@@ -133,6 +133,21 @@ public class Arr{
 
     }
 
+    //10.Best time to buy and sell stocks
+    public static int stocks(int arr[]){
+        int bp = Integer.MAX_VALUE;
+        int maxp =0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>bp){
+                int p = arr[i] - bp;
+                maxp = Math.max(maxp, p);
+            }else{
+                bp=arr[i];
+            }
+        }
+        return maxp;
+    }
+
 
 
 
@@ -190,8 +205,12 @@ public class Arr{
 
         /*  *******************************************       Question : 9                 ************************************************* */
         //9.Trapping Rain water
-        System.out.println("Trapped Rain Water is: "+trapRainWater(arr));
-        
+        // System.out.println("Trapped Rain Water is: "+trapRainWater(arr));
+
+
+        /*  *******************************************       Question : 10                 ************************************************* */
+        //10.Best time to buy and sell Stocks
+        // System.out.println("The Maximum Profit Acheived is: "+stocks(arr));
 
     }
 }
