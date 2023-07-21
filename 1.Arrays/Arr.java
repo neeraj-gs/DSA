@@ -109,6 +109,30 @@ public class Arr{
 
     }
 
+    //9.TRAPPING RAIN WATER IN ARRAY
+    public static int trapRainWater(int arr[]){
+        int leftMax[] = new int[arr.length];
+        leftMax[0] = arr[0];
+        for(int i=1;i<arr.length;i++){
+            leftMax[i] = Math.max(arr[i],leftMax[i-1]);
+        }
+
+        int rightMax[] = new int[arr.length];
+        rightMax[arr.length-1] = arr[arr.length-1];
+        for(int i=arr.length-2;i>=0;i--){
+            rightMax[i] = Math.max(arr[i],rightMax[i+1]);
+        }
+
+        int waterlevel = 0;
+        int trappedWater = 0;
+        for(int i=0;i<arr.length;i++){
+            waterlevel = Math.min(leftMax[i],rightMax[i]);
+            trappedWater += waterlevel - arr[i];
+        }
+        return trappedWater;
+
+    }
+
 
 
 
@@ -158,11 +182,16 @@ public class Arr{
 
         /*  *******************************************       Question : 7                 ************************************************* */
         //7.Sub Arrays
-        SubArrays(arr);
+        // SubArrays(arr);
 
         /*  *******************************************       Question : 8                 ************************************************* */
         //8.Kadanes Algorithm - -Used to find the Maximum Sub Array SUm in an Array
-        Kadanes(arr);
+        // Kadanes(arr);
+
+        /*  *******************************************       Question : 9                 ************************************************* */
+        //9.Trapping Rain water
+        System.out.println("Trapped Rain Water is: "+trapRainWater(arr));
+        
 
     }
 }
