@@ -86,6 +86,33 @@ public class Arr{
             System.out.println();
         }
     }
+
+
+    //8.Kadanes Algorithm
+    public static int Kadanes(int arr[]){
+        int cs = 0;
+        int ms = Integer.MIN_VALUE;
+        int neg = Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++){
+            cs += arr[i];
+            if(cs <0){
+                cs = 0;
+                neg = Math.max(neg,arr[i]);
+            }
+            ms = Math.max(ms,cs);
+        }
+        if(ms ==0 && neg!= Integer.MIN_VALUE){
+            return neg;
+        }
+
+        return ms;
+
+    }
+
+
+
+
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         // int arr2[] = {1,2,5,6,8,}; //A way to create an array
@@ -132,6 +159,10 @@ public class Arr{
         /*  *******************************************       Question : 7                 ************************************************* */
         //7.Sub Arrays
         SubArrays(arr);
+
+        /*  *******************************************       Question : 8                 ************************************************* */
+        //8.Kadanes Algorithm - -Used to find the Maximum Sub Array SUm in an Array
+        Kadanes(arr);
 
     }
 }
