@@ -57,7 +57,20 @@ public class Matrix{
         }
     }
 
-
+    //3.Diagnol Sum
+    public static int DiagSum(int arr[][],int row,int col){
+        int sum = 0;
+        for(int i=0;i<arr.length;i++){
+            //pd
+            sum+=arr[i][i];
+            
+            //sd
+            if(i!=arr.length-1-i){
+                sum+=arr[i][arr.length-1-i];
+            }
+        }
+        return sum;
+    }
 
 
 
@@ -85,7 +98,13 @@ public class Matrix{
 
         // *******************************************************************************                Question 2 *                        ***************************************************************************************************
         //2.Spiral Matrix
-        SpiralMatrix(arr,row,col);
+        // SpiralMatrix(arr,row,col);
+
+
+        // *******************************************************************************                Question 3 *                        **************************************************************************************************
+        //3.Diagnol Sum of a Matrix
+        //Sum of both principal and secondary diagnol
+        System.out.println(DiagSum(arr,row,col));
 
 
     }
