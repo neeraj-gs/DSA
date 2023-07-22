@@ -94,6 +94,19 @@ public class Matrix{
         return false;
     }
 
+    //5.Count number of times a number has occured
+    public static int countN(int arr[][],int key){
+        int c=0;
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[0].length;j++){
+                if(arr[i][j]==key){
+                    c++;
+                }
+            }
+        }
+        return c;
+    }
+
 
 
     public static void main(String[] args) {
@@ -132,6 +145,10 @@ public class Matrix{
         // staircaseSearch(arr, 10);
         //if(n>>>>>m) or (m>>>>>>n) -- O(N+M)
 
+
+        // *******************************************************************************                Question 5 *                        **************************************************************************************************
+        //5.Print number of 7's in 2d Array:
+        System.out.println(countN(arr,7));
     }
 }
 
