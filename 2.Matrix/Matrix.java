@@ -117,6 +117,16 @@ public class Matrix{
         return s;
     }
 
+    //7.Transpose of a Matrix
+    public static void transpose(int arr[][]){
+        for(int i=0;i<arr[0].length;i++){
+            for(int j=0;j<arr.length;j++){
+                System.out.print(arr[j][i]+" ");
+            }
+            System.out.println();
+        }
+    }
+
 
 
     public static void main(String[] args) {
@@ -163,6 +173,12 @@ public class Matrix{
         // *******************************************************************************                Question 6 *                        **************************************************************************************************
         //6.Pritn the sum of numbers in nth row of matrix
         // System.out.println(countSum(arr,1));
+
+        // *******************************************************************************                Question 7 *                        **************************************************************************************************
+        //7.Transpose of a Matrix
+        transpose(arr);
+
+
     }
 }
 
