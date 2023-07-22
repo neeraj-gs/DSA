@@ -107,6 +107,16 @@ public class Matrix{
         return c;
     }
 
+    //6.Count the Sum of numebrs of Nth row
+    public static int countSum(int arr[][],int row){
+        int s = 0;
+        for(int i=0;i<arr.length;i++){
+            s+=arr[row][i];
+
+        }
+        return s;
+    }
+
 
 
     public static void main(String[] args) {
@@ -148,7 +158,11 @@ public class Matrix{
 
         // *******************************************************************************                Question 5 *                        **************************************************************************************************
         //5.Print number of 7's in 2d Array:
-        System.out.println(countN(arr,7));
+        // System.out.println(countN(arr,7));
+
+        // *******************************************************************************                Question 6 *                        **************************************************************************************************
+        //6.Pritn the sum of numbers in nth row of matrix
+        // System.out.println(countSum(arr,1));
     }
 }
 
