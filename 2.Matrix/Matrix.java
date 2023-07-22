@@ -11,8 +11,59 @@ public class Matrix{
             }
             System.out.println();
         }
-
     }
+
+
+
+    //2.Print SPiral Matrix
+    public static void SpiralMatrix(int arr[][],int row,int col){
+        int sr=0;
+        int sc=0;
+        int er=row-1;
+        int ec=col-1;
+        while(sr<=er && sc<=ec){
+            //top
+            for(int i=sc;i<=ec;i++){
+                System.out.print(arr[sr][i]+" ");
+            }
+
+            //right
+            
+            for(int j=sr+1;j<=er;j++){
+                System.out.print(arr[j][ec]+" ");
+            }
+
+            //bottom
+            for(int i=ec-1;i>=sc;i--){
+                if(sc==ec){
+                    return;
+                }
+                System.out.print(arr[er][i]+" ");
+            }
+
+            //left
+            for(int i=er-1;i>=sr+1;i--){
+                if(sr==er){
+                    return;
+                }
+                System.out.print(arr[i][sc]+" ");
+
+            }
+
+            sr++;
+            sc++;
+            er--;
+            ec--;
+        }
+    }
+
+
+
+
+
+
+
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         // *******************************************************************************                Question 1 *                        ***************************************************************************************************
@@ -31,6 +82,11 @@ public class Matrix{
             }
         }
         PrintMatrix(arr, row, col);
+
+        // *******************************************************************************                Question 2 *                        ***************************************************************************************************
+        //2.Spiral Matrix
+        SpiralMatrix(arr,row,col);
+
 
     }
 }
