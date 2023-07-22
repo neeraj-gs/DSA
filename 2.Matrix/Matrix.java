@@ -73,7 +73,26 @@ public class Matrix{
     }
 
 
+    //4.staircase Search
+    public static boolean staircaseSearch(int arr[][],int key){
+        int row=0;
+        int col = arr[0].length-1;
+        while(row<arr.length&&col>=0){
+            if(arr[row][col]==key){
+                System.out.print("Key Found at index: "+row+" , "+col);
+                return true;
+            }
 
+            else if(key<arr[row][col]){
+                col--;
+            }
+            else{
+                row++;
+            }
+        }
+        System.out.print("Key Not Found: ");
+        return false;
+    }
 
 
 
@@ -104,8 +123,14 @@ public class Matrix{
         // *******************************************************************************                Question 3 *                        **************************************************************************************************
         //3.Diagnol Sum of a Matrix
         //Sum of both principal and secondary diagnol
-        System.out.println(DiagSum(arr,row,col));
+        //System.out.println(DiagSum(arr,row,col));//
 
+
+        // *******************************************************************************                Question 4 *                        **************************************************************************************************
+        //4.Search in A Sorted Matrix
+        //We will use Staircase serach Pattern 
+        // staircaseSearch(arr, 10);
+        //if(n>>>>>m) or (m>>>>>>n) -- O(N+M)
 
     }
 }
