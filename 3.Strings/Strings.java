@@ -82,6 +82,13 @@ public class Strings{
 
         //**********************************************                          QUESTION 5                           ************************************************8*/
         //5.String Builder
+        //Are mutable 
+        //Creatoin and Addition and Basic In-Built String BUilder Functions
+        StringBuilder sb = new StringBuilder("Neeraj");
+        sb.toString(); //converts to string
+        //whenever new keyword is sued that is an object [Integer and all this data types are Objects]
+        sb.append(" GS"); //adds this to the end of sb
+        
 
 
     }
