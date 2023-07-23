@@ -20,6 +20,29 @@ public class Strings{
         return true;
     }
 
+    //3.Finding shortest path given Directions
+    public static float shortestPath(String str){
+        float x=0;
+        float y=0;
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)=='W'){
+                x--;
+            }
+            else if(str.charAt(i)=='N'){
+                y++;
+            }
+            else if(str.charAt(i)=='S'){
+                y--;
+            }
+            else{
+                x++;
+            }
+        }
+        float X = x*x;
+        float Y = y*y;
+        return (float)Math.sqrt(X+Y);
+    }
+
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -36,7 +59,12 @@ public class Strings{
 
         //**********************************************                          QUESTION 2                           ************************************************8*/
         //2.Palindrome or Not
-        Palindrome(str);
+        // Palindrome(str);
+
+
+        //**********************************************                          QUESTION 3                           ************************************************8*/
+        //3.Find Shortest Path from given directions
+        System.out.println(shortestPath(str));
 
     }
 }
