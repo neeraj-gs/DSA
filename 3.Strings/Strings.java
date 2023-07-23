@@ -113,6 +113,29 @@ public class Strings{
 
     }
 
+    //9.Anagrams or Not
+    public static void anagrams(String str1,String str2){
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
+
+        if(str1.length() == str2.length()){
+            char[] str1charArray = str1.toCharArray();
+            char[] str2charArray = str2.toCharArray();
+            Arrays.sort(str1charArray);
+            Arrays.sort(str2charArray);
+
+            if(Arrays.equals(str1charArray,str2charArray)){
+                System.out.print("They are Anagrams");
+            }else{
+                System.out.println("Not Anagrams");
+            }
+        }
+        else{
+        System.out.println("Not Anagrams");
+    }
+
+    }
+
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -174,6 +197,12 @@ public class Strings{
         //**********************************************                          QUESTION 8                           ************************************************8*/
         //8.Count NUmber of LowerCase Vowels Occured in String
         // System.out.println(countLcase(str));
+
+        
+        //**********************************************                          QUESTION 9                           ************************************************8*/
+        //9.Check if strings are anagrams or not
+        String str2 = "race";
+        anagrams(str,str2);
 
 
 
