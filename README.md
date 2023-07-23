@@ -29,3 +29,15 @@ These are the only DSA Problems I did for my placements.I would urge you all to 
 - 6.Sum of numbers of nth row in Matrix
 - 7.Transpose of a Matrix
 
+### Strings
+- 1.Creation , Input , Output and In-Built String Functions
+- 2.Check if the Given String is Palindrome or Not
+- 3.Find Shortest Distance or Dispalcement from Point to Point
+- 4.More In-Built String functions which can be used to solve larger problems
+- 5.New Data Structure called String Builder simialr to strigns but better efficiency and all operatinos on strings can be done using stringBUilders
+- 6.Convert First letter of Each word in a Sentence to UpperCase
+- 7.String Compression usgin String as DataStructure and Also String Builder as a Data Structure
+- 8.Count the Number of Lower case vowels Occured in string
+- 9.Check if the 2 Strings are Anagrams or Not
+
+
