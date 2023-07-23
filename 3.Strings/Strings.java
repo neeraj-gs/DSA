@@ -69,14 +69,20 @@ public class Strings{
         
         //**********************************************                          QUESTION 4                           ************************************************8*/
         //4.More inBuilt String Functions
-        String str2="abcd";
-        str.equals(str2); //returns true is equal else false
-        str.substring(0, 3); //ending index is not included 0-2 charecters are printed in this case
-        str.compareTo(str2); //it goes letter by letter
-        str.compareToIgnoreCase(str2); // comapares and gives 
+        // String str2="abcd";
+        // str.equals(str2); //returns true is equal else false
+        // str.substring(0, 3); //ending index is not included 0-2 charecters are printed in this case
+        // str.compareTo(str2); //it goes letter by letter
+        // str.compareToIgnoreCase(str2); // comapares and gives 
         //if 0 --both are equal
         //if <0 or -ve -- str<str2
         //if >0 or +ve -- str>str2
+
+
+
+        //**********************************************                          QUESTION 5                           ************************************************8*/
+        //5.String Builder
+
 
     }
 }
