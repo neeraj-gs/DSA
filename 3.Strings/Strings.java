@@ -48,7 +48,7 @@ public class Strings{
     //6.Converts first letter to upper case
     public static String toUpperCase(String str){
         StringBuilder sb = new StringBuilder("");
-        char ch = Charecter.toUpperCase(str.charAt(0));
+        char ch = Character.toUpperCase(str.charAt(0));
         sb.append(ch);
 
         for(int i=0;i<str.length();i++){
@@ -65,6 +65,25 @@ public class Strings{
     }
 
 
+    //7.String COmpression
+    public static String strCompress(String str){
+        //using String
+        String newStr = "";
+        for(int i=0;i<str.length();i++){
+            Integer count = 1;
+            while(i<str.length()-1 && str.charAt(i)==str.charAt(i+1)){
+                count++;
+                i++;
+            }
+            newStr+=str.charAt(i);
+            if(count>1){
+                newStr += count.toString();
+            }
+        }
+        return newStr;
+    }
+
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         //**********************************************                          QUESTION 1                           ************************************************8*/
@@ -75,8 +94,8 @@ public class Strings{
         // String str = "STR";
         // String str = new String("str"); //These 2 are other ways to Enter String
 
-        System.out.println("Length of String is: "+str.length()); //we also use concatenation in every rint str1+str2 = concatenation
-        System.out.println("Charecter at Index 2 is: "+str.charAt(2));
+        // System.out.println("Length of String is: "+str.length()); //we also use concatenation in every rint str1+str2 = concatenation
+        // System.out.println("Charecter at Index 2 is: "+str.charAt(2));
 
         //**********************************************                          QUESTION 2                           ************************************************8*/
         //2.Palindrome or Not
@@ -85,7 +104,7 @@ public class Strings{
 
         //**********************************************                          QUESTION 3                           ************************************************8*/
         //3.Find Shortest Path from given directions
-        System.out.println(shortestPath(str));
+        // System.out.println(shortestPath(str));
 
         
         //**********************************************                          QUESTION 4                           ************************************************8*/
@@ -105,15 +124,22 @@ public class Strings{
         //5.String Builder
         //Are mutable 
         //Creatoin and Addition and Basic In-Built String BUilder Functions
-        StringBuilder sb = new StringBuilder("Neeraj");
-        sb.toString(); //converts to string
-        //whenever new keyword is sued that is an object [Integer and all this data types are Objects]
-        sb.append(" GS"); //adds this to the end of sb
+        // StringBuilder sb = new StringBuilder("Neeraj");
+        // sb.toString(); //converts to string
+        // //whenever new keyword is sued that is an object [Integer and all this data types are Objects]
+        // sb.append(" GS"); //adds this to the end of sb
 
 
         //**********************************************                          QUESTION 6                           ************************************************8*/
         //6.Convert each first letter of word to Uppercase
-        System.out.println(toUpperCase(str));
+        // System.out.println(toUpperCase(str));
+
+
+        //**********************************************                          QUESTION 7                           ************************************************8*/
+        //7.String Compression
+        //ex: aaabbcccd -- a3b2c3d
+        System.out.println(strCompress(str));
+
 
 
     }
