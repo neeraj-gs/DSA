@@ -1,5 +1,6 @@
 //STRINGS ALL BASIC TO INTERMIDIATE QUETIONS
 
+import java.nio.charset.CharsetEncoder;
 import java.util.*;
 public class Strings{
 
@@ -41,6 +42,26 @@ public class Strings{
         float X = x*x;
         float Y = y*y;
         return (float)Math.sqrt(X+Y);
+    }
+
+
+    //6.Converts first letter to upper case
+    public static String toUpperCase(String str){
+        StringBuilder sb = new StringBuilder("");
+        char ch = Charecter.toUpperCase(str.charAt(0));
+        sb.append(ch);
+
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)==' ' && i<str.length()-1){
+                sb.append(str.charAt(i));
+                i++;
+                sb.append(Character.toUpperCase(str.charAt(i)));
+            }
+            else{
+                sb.append(str.charAt(i));
+            }
+        }
+        return sb.toString();
     }
 
 
@@ -88,7 +109,11 @@ public class Strings{
         sb.toString(); //converts to string
         //whenever new keyword is sued that is an object [Integer and all this data types are Objects]
         sb.append(" GS"); //adds this to the end of sb
-        
+
+
+        //**********************************************                          QUESTION 6                           ************************************************8*/
+        //6.Convert each first letter of word to Uppercase
+        System.out.println(toUpperCase(str));
 
 
     }
