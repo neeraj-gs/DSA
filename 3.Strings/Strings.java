@@ -101,6 +101,19 @@ public class Strings{
     }
 
 
+    //8.Count Vowels Occureed in String entered by the User
+    public static int countLcase(String str){
+        int c =0;
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)=='a'||str.charAt(i)=='e'||str.charAt(i)=='i'||str.charAt(i)=='o'||str.charAt(i)=='u'){
+                c++;
+            }
+        }
+        return c;
+
+    }
+
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         //**********************************************                          QUESTION 1                           ************************************************8*/
@@ -155,7 +168,13 @@ public class Strings{
         //**********************************************                          QUESTION 7                           ************************************************8*/
         //7.String Compression
         //ex: aaabbcccd -- a3b2c3d
-        System.out.println(strCompress(str));
+        // System.out.println(strCompress(str));
+
+
+        //**********************************************                          QUESTION 8                           ************************************************8*/
+        //8.Count NUmber of LowerCase Vowels Occured in String
+        // System.out.println(countLcase(str));
+
 
 
 
