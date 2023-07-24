@@ -40,4 +40,10 @@ These are the only DSA Problems I did for my placements.I would urge you all to 
 - 8.Count the Number of Lower case vowels Occured in string
 - 9.Check if the 2 Strings are Anagrams or Not
 
-
+### Sorting Algorithms
+- 1.Bubble Sort - Arrange Elements in Ascending and Descending Order Both
+- 2.Selection Sort - Arrange Elements in Ascending and Descending Order Both
+- 3.Insertion Sort - Arrange Elements in Ascending and Descending Order Both
+- 4.Count Sort - Arrange Elements in Ascending and Descending Order Both
+- 5.Merge Sort - Arrange Elements in Ascending and Descending Order Both
+- 6.Quick Sort - Arrange Elements in Ascending and Descending Order Both
