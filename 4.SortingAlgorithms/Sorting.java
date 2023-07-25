@@ -49,6 +49,7 @@ public class Sorting{
             int curr = arr[i];
             int j=i-1;
             while(arr[j]>curr && j>=0){
+                //only change arr[j]<curr , then it is sorted in descending order
                 arr[j+1]=arr[j];
                 j--;
             }
