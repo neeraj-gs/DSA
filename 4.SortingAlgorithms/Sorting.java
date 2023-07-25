@@ -13,6 +13,8 @@ public class Sorting{
         while(c<arr.length-1){
             for(int i=0;i<arr.length-c;i++){
                 if(arr[i]>arr[i+1]){
+                    //For descending -- only change
+                    //arr[i]<arr[i+1] //makes in descending order
                     int temp = arr[i];
                     arr[i] = arr[i+1];
                     arr[i+1] = temp;
