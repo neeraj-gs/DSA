@@ -31,6 +31,8 @@ public class Sorting{
         for(int i=0;i<arr.length-1;i++){
             for(int j=i+1;j<arr.length;j++){
                 if(arr[j]<arr[i]){
+                    //for Making selection sort in descending order
+                    //arr[i]<arr[j] //Makes in descending order
                     int temp = arr[j];
                     arr[j] = arr[i];
                     arr[i] = temp;
