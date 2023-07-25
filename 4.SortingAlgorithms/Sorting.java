@@ -39,6 +39,20 @@ public class Sorting{
         printArr(arr);
     }
 
+    //3.Insertion Sort
+    public static void insertionSort(int arr[]){
+        for(int i=1;i<arr.length;i++){
+            int curr = arr[i];
+            int j=i-1;
+            while(arr[j]>curr && j>=0){
+                arr[j+1]=arr[j];
+                j--;
+            }
+            arr[j+1]=curr;
+        }
+        printArr(arr);
+    }
+
 
     public static void main(String[] args) {
         int arr[] = {1,3,7,5,4,6};
@@ -54,6 +68,10 @@ public class Sorting{
             //2 loops outer - -1st to 2nd last
             //inner loop i+1 to last ele and compare if smaller swwap 
             // selectionSort(arr);
+
+        //3.Insertion Sort
+            //insert an ele from unsorted array to its correct position in sorted array
+            insertionSort(arr);
             
     }
 }
