@@ -53,9 +53,43 @@ public class Sorting{
         printArr(arr);
     }
 
+    //4.Count SOrt
+    public static void countSort(int arr[]){
+        //FInd max ele in array
+        int k=arr[0];
+        for(int i=0;i<arr.length;i++){
+            k=Math.max(k,arr[i]);
+        }
+
+        //count of each elelemt
+        int count[] = new int[k];
+        for(int i=0;i<arr.length;i++){
+            count[arr[i]]++;
+        }
+
+
+        for(int i=1;i<=count.length;i++){
+            count[i]+= count[i-1];
+        }
+
+        int output[] = new int[arr.length];
+        for(int i=arr.length-1;i>=0;i--){
+            // count[arr[i]] = count[arr[i]]-1;
+            output[count[arr[i]]] = output[count[arr[i]]]-1;
+        }
+
+
+        for(int i=0;i<arr.length;i++){
+            arr[i] = output[i];
+        }
+        printArr(arr);
+
+
+    }
+
 
     public static void main(String[] args) {
-        int arr[] = {1,3,7,5,4,6};
+        int arr[] = {1,3,2,3,4,1,6,4,3};
 
         //1.Bubble Sort
             //Reaeatedly Swap 2 adajcent elemetns if in wrong order
@@ -71,7 +105,12 @@ public class Sorting{
 
         //3.Insertion Sort
             //insert an ele from unsorted array to its correct position in sorted array
-            insertionSort(arr);
+            // insertionSort(arr);
+
+        //4.Count SOrt
+            //find count of every distinct ele
+            //calculate position of every elee in sorted array
+            countSort(arr);
             
     }
 }
