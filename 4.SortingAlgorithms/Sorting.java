@@ -110,7 +110,7 @@ public class Sorting{
         //4.Count SOrt
             //find count of every distinct ele
             //calculate position of every elee in sorted array
-            countSort(arr);
+            // countSort(arr);
             
     }
 }
