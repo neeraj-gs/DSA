@@ -201,8 +201,8 @@ public class Strings{
         
         //**********************************************                          QUESTION 9                           ************************************************8*/
         //9.Check if strings are anagrams or not
-        String str2 = "race";
-        anagrams(str,str2);
+        // String str2 = "race";
+        // anagrams(str,str2);
 
 
 
