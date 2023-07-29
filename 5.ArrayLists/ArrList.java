@@ -13,6 +13,12 @@ public class ArrList{
             System.out.print(list.get(i)+" ");
         }
     }
+
+    //4.Minimum and Maximum in an Array list
+    public static void MinMax(ArrayList<Integer> list){
+        Collections.sort(list);
+        System.out.println("Miimum Eleemnt is: "+list.get(0)+" and Maximum ele is: "+list.get(list.size()-1));
+    }
     public static void main(String[] args) {
 
     // **************************************                         QUESTION 1    *************************************************************
@@ -67,14 +73,15 @@ public class ArrList{
 
         // **************************************                         QUESTION 3    *************************************************************
         //3.Sorting of an array lsit
-        Collections.sort(list); //to sort in ascending order
-        System.out.println(list);;
-        Collections.sort(list,Collections.reverseOrder());
-        System.out.println(list);
+        // Collections.sort(list); //to sort in ascending order
+        // System.out.println(list);;
+        // Collections.sort(list,Collections.reverseOrder());
+        // System.out.println(list);
 
 
         // **************************************                         QUESTION 4    *************************************************************
-        //4.
+        //4.FInd maximum and minimum element in Array LIsr
+        MinMax(list);
 
         
     }
