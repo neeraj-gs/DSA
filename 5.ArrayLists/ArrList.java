@@ -58,18 +58,23 @@ public class ArrList{
         //2.PRINT REVERSE OF ARRAY LSIT
         list.add(1); //adds eleemnt 1
         list.add(2);
-        list.add(3);
-        list.add(4); 
-        list.add(5);
+        list.add(7);
+        list.add(5); 
+        list.add(10);
         list.add(6);
-        printRev(list);
+        // printRev(list);
 
 
         // **************************************                         QUESTION 3    *************************************************************
-        //3.FIND MAXIMUM AND MINIMUM OF ARRAY LIST
+        //3.Sorting of an array lsit
+        Collections.sort(list); //to sort in ascending order
+        System.out.println(list);;
+        Collections.sort(list,Collections.reverseOrder());
+        System.out.println(list);
 
 
-
+        // **************************************                         QUESTION 4    *************************************************************
+        //4.
 
         
     }
