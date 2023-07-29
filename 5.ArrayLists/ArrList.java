@@ -62,6 +62,22 @@ public class ArrList{
 
     }
 
+    //8.PairSum
+    public static boolean PairSum(ArrayList<Integer> list,int target){
+        int lp = 0;
+        int rp = list.size()-1;
+        while(lp<rp){
+            if(list.get(lp) + list.get(rp)==target){
+                return true;
+            }else if(list.get(rp)+list.get(lp)<target){
+                lp++;
+            }else{
+                rp++;
+            }
+        }
+        return false;
+    }
+
 
 
 
@@ -110,12 +126,12 @@ public class ArrList{
 
         // **************************************                         QUESTION 2    *************************************************************
         //2.PRINT REVERSE OF ARRAY LSIT
-        // list.add(1); //adds eleemnt 1
-        // list.add(2);
-        // list.add(7);
-        // list.add(5); 
-        // list.add(10);
-        // list.add(6);
+        list.add(1); //adds eleemnt 1
+        list.add(2);
+        list.add(3);
+        list.add(4); 
+        list.add(5);
+        list.add(6);
         // printRev(list);
 
 
@@ -161,11 +177,13 @@ public class ArrList{
     // **************************************                         QUESTION 7   *************************************************************
     //7.Container with Most Water
     //Use 2 lines from n line sin x axis to forma a container that hold maximum water
-    int height[] = {1,8,6,2,5,4,8,3,7};
-    containeWithMostWater(height);
+    // int height[] = {1,8,6,2,5,4,8,3,7};
+    // containeWithMostWater(height);
 
 
-
+    // **************************************                         QUESTION 8    *************************************************************
+    //8.Pair Sum --find any pair such that the sum is equal to a target
+    System.out.println(PairSum(list,100));
 
         
     }
