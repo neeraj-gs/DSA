@@ -78,7 +78,34 @@ public class ArrList{
         return false;
     }
 
+    //9.PairSum - 2
+    public static boolean PairSum2(ArrayList<Integer> list,int target){
+        //Finding breaking point- i , small=lp=i+1 , large=rp=i
+        int bp=-1;
+        for(int i=0;i<list.size();i++){
+            if(list.get(i)>list.get(i+1)){
+                bp=i;
+                break;
+            }
+        }
 
+        int lp = bp+1;
+        int rp = bp;
+        while(lp!=rp){
+            if(list.get(rp)+list.get(lp)==target){
+                return true;
+            }else if(list.get(rp)+list.get(lp)<target){
+                lp = (lp+1)%list.size();
+            }else{
+                rp = (list.size()+rp-1)%list.size();
+            }
+
+
+        }
+        return false;
+
+
+    }
 
 
 
@@ -126,12 +153,12 @@ public class ArrList{
 
         // **************************************                         QUESTION 2    *************************************************************
         //2.PRINT REVERSE OF ARRAY LSIT
-        list.add(1); //adds eleemnt 1
-        list.add(2);
-        list.add(3);
-        list.add(4); 
-        list.add(5);
+        list.add(11); //adds eleemnt 1
+        list.add(15);
         list.add(6);
+        list.add(8); 
+        list.add(9);
+        list.add(10);
         // printRev(list);
 
 
@@ -182,8 +209,13 @@ public class ArrList{
 
 
     // **************************************                         QUESTION 8    *************************************************************
-    //8.Pair Sum --find any pair such that the sum is equal to a target
-    System.out.println(PairSum(list,100));
+    //8.Pair Sum 1--find any pair such that the sum is equal to a target
+    // System.out.println(PairSum(list,100));
+
+    // **************************************                         QUESTION 9    *************************************************************
+    //PairSum -2 : Find a pair in Sorted Rotated Array that is equal to our target
+    System.out.println(PairSum2(list, 116));
+
 
         
     }
