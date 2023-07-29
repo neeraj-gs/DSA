@@ -9,7 +9,7 @@ Implementation of Array Lists
     
     Older eleemtns are copied in new array and new elements are added and old aray list is deleted
     by gabage collector automatically
-    
+
 
 
 */
@@ -81,12 +81,12 @@ public class ArrList{
 
         // **************************************                         QUESTION 2    *************************************************************
         //2.PRINT REVERSE OF ARRAY LSIT
-        list.add(1); //adds eleemnt 1
-        list.add(2);
-        list.add(7);
-        list.add(5); 
-        list.add(10);
-        list.add(6);
+        // list.add(1); //adds eleemnt 1
+        // list.add(2);
+        // list.add(7);
+        // list.add(5); 
+        // list.add(10);
+        // list.add(6);
         // printRev(list);
 
 
@@ -107,6 +107,24 @@ public class ArrList{
         //5.Swap 2 Numbers
         // System.out.println("List Before Swap: "+list);
         // swap(list,0,3);
+
+        // **************************************                         QUESTION 5    *************************************************************
+        //6.MultiDimensional Array List
+        ArrayList<ArrayList<Integer>> mainlist = new ArrayList<>();
+        ArrayList<Integer> list1 = new ArrayList<>();
+        list1.add(1);list1.add(2);list1.add(3);list1.add(4);list1.add(5);
+        mainlist.add(list1);
+        ArrayList<Integer> list2 = new ArrayList<>();
+        ArrayList<Integer> list3 = new ArrayList<>();
+        for(int i=1;i<=5;i++){
+            list2.add(i*2);
+            list3.add(i*3);
+        }
+
+        mainlist.add(list2);
+        mainlist.add(list3);
+
+        System.out.println(mainlist);
 
 
 
