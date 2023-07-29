@@ -2,6 +2,16 @@
 /*
 In BUilt data structure, that is linear and dynamic in size , Primitive data types cant be stored directly
 Array klist is a  calss in java
+
+Implementation of Array Lists
+    When we define some array list in java , in memory an array is created with some fixed size by default
+    as the array is full , java automatically doubles the size of array intrenally to store more data
+    
+    Older eleemtns are copied in new array and new elements are added and old aray list is deleted
+    by gabage collector automatically
+    
+
+
 */
 import java.util.*;
 public class ArrList{
@@ -95,8 +105,8 @@ public class ArrList{
 
         // **************************************                         QUESTION 5    *************************************************************
         //5.Swap 2 Numbers
-        System.out.println("List Before Swap: "+list);
-        swap(list,0,3);
+        // System.out.println("List Before Swap: "+list);
+        // swap(list,0,3);
 
 
 
