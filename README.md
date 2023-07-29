@@ -47,3 +47,6 @@ These are the only DSA Problems I did for my placements.I would urge you all to 
 - 4.Count Sort - Arrange Elements in Ascending and Descending Order Both
 - 5.Merge Sort - Arrange Elements in Ascending and Descending Order Both
 - 6.Quick Sort - Arrange Elements in Ascending and Descending Order Both
+
+### Array Lists
+- 1.
