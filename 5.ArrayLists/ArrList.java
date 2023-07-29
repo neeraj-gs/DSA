@@ -19,6 +19,15 @@ public class ArrList{
         Collections.sort(list);
         System.out.println("Miimum Eleemnt is: "+list.get(0)+" and Maximum ele is: "+list.get(list.size()-1));
     }
+
+    //5.Swap 2 elements inArray List
+    public static void swap(ArrayList<Integer> list,int idx1,int idx2){
+        int temp = list.get(idx1);
+        list.set(idx1,list.get(idx2));
+        list.set(idx2,temp);
+
+        System.out.println("List After Swap: "+list);
+    }
     public static void main(String[] args) {
 
     // **************************************                         QUESTION 1    *************************************************************
@@ -81,7 +90,15 @@ public class ArrList{
 
         // **************************************                         QUESTION 4    *************************************************************
         //4.FInd maximum and minimum element in Array LIsr
-        MinMax(list);
+        // MinMax(list);
+
+
+        // **************************************                         QUESTION 5    *************************************************************
+        //5.Swap 2 Numbers
+        System.out.println("List Before Swap: "+list);
+        swap(list,0,3);
+
+
 
         
     }
