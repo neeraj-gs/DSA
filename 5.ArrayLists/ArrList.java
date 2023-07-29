@@ -38,6 +38,35 @@ public class ArrList{
 
         System.out.println("List After Swap: "+list);
     }
+
+    //7.Container with most Water
+    public static void containeWithMostWater(int height[]){
+        int maxw=0;
+        int lp = 0;
+        int rp = height.length-1;
+        while(lp<rp){
+            //water area
+            int ht = Math.min(height[lp],height[rp]);
+            int wt = rp-lp;
+            int curw = ht*wt;
+            maxw = Math.max(maxw,curw);
+
+
+            if(height[lp]<height[rp]){
+                lp++; 
+            }else{
+                rp--;
+            }
+        }
+        System.out.println("Max Water Stored is: "+maxw);
+
+    }
+
+
+
+
+
+
     public static void main(String[] args) {
 
     // **************************************                         QUESTION 1    *************************************************************
@@ -108,23 +137,33 @@ public class ArrList{
         // System.out.println("List Before Swap: "+list);
         // swap(list,0,3);
 
-        // **************************************                         QUESTION 5    *************************************************************
+
+
+        // **************************************                         QUESTION 6    *************************************************************
         //6.MultiDimensional Array List
-        ArrayList<ArrayList<Integer>> mainlist = new ArrayList<>();
-        ArrayList<Integer> list1 = new ArrayList<>();
-        list1.add(1);list1.add(2);list1.add(3);list1.add(4);list1.add(5);
-        mainlist.add(list1);
-        ArrayList<Integer> list2 = new ArrayList<>();
-        ArrayList<Integer> list3 = new ArrayList<>();
-        for(int i=1;i<=5;i++){
-            list2.add(i*2);
-            list3.add(i*3);
-        }
+        // ArrayList<ArrayList<Integer>> mainlist = new ArrayList<>();
+        // ArrayList<Integer> list1 = new ArrayList<>();
+        // list1.add(1);list1.add(2);list1.add(3);list1.add(4);list1.add(5);
+        // mainlist.add(list1);
+        // ArrayList<Integer> list2 = new ArrayList<>();
+        // ArrayList<Integer> list3 = new ArrayList<>();
+        // for(int i=1;i<=5;i++){
+        //     list2.add(i*2);
+        //     list3.add(i*3);
+        // }
 
-        mainlist.add(list2);
-        mainlist.add(list3);
+        // mainlist.add(list2);
+        // mainlist.add(list3);
 
-        System.out.println(mainlist);
+        // System.out.println(mainlist);
+
+
+    // **************************************                         QUESTION 7   *************************************************************
+    //7.Container with Most Water
+    //Use 2 lines from n line sin x axis to forma a container that hold maximum water
+    int height[] = {1,8,6,2,5,4,8,3,7};
+    containeWithMostWater(height);
+
 
 
 
