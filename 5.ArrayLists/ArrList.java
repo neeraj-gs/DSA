@@ -107,6 +107,22 @@ public class ArrList{
 
     }
 
+    //10.Monotonic Array List
+    public static boolean Monotonic(ArrayList<Integer> list){
+        boolean inc = true;
+        boolean dec=true;
+        for(int i=0;i<list.size()-1;i++){
+            if(list.get(i)>list.get(i+1)){
+                inc=false;
+            }
+
+            if(list.get(i+1)>list.get(i)){
+                dec=false;
+            }
+        }
+        return inc||dec;
+    }
+
 
 
 
@@ -214,8 +230,11 @@ public class ArrList{
 
     // **************************************                         QUESTION 9    *************************************************************
     //PairSum -2 : Find a pair in Sorted Rotated Array that is equal to our target
-    System.out.println(PairSum2(list, 116));
+    // System.out.println(PairSum2(list, 116));
 
+    // **************************************                         QUESTION 10    *************************************************************
+    //10.Monotonic Array List or Not
+    System.out.println(Monotonic(list));
 
         
     }
