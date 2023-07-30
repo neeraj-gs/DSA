@@ -47,6 +47,18 @@ public class LinkedList {
 
     }
 
+    //3.Print a Linked list
+    public void Printll(){
+        Node temp=head;
+        while(temp!=null){
+            System.out.print(temp.data+"->");
+            temp=temp.next;
+        }
+    }
+
+
+
+
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
         //We will cerate methords and not write here
@@ -60,6 +72,9 @@ public class LinkedList {
         ll.addLast(3);
         ll.addLast(4);
         
+        //3.Print a LL
+        ll.Printll();
+
 
     }
     
