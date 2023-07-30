@@ -147,6 +147,8 @@ public class ArrList{
         return list;
     }
 
+    //12.
+
 
 
 
