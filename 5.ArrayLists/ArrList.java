@@ -123,6 +123,30 @@ public class ArrList{
         return inc||dec;
     }
 
+    //11.FInd lonely Eleemnt
+    public static ArrayList<Integer> findLonely(ArrayList<Integer> nums){
+        Collections.sort(nums);
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i=1;i<list.size()-1;i++){
+            if(nums.get(i-1)+1 < nums.get(i) && nums.get(i)+1 < nums.get(i+1)){
+                list.add(nums.get(i));
+
+            }
+        }
+        if(nums.size()==1){
+            list.add(nums.get(0));
+        }
+        if(nums.size()>1){
+            if(nums.get(0)+1<nums.get(1)){
+                list.add(nums.get(0));
+            }
+            if(nums.get(nums.size()-2)+1 < nums.get(nums.size()-1)){
+                list.add(nums.get(nums.size()-1));
+            }
+        }
+        return list;
+    }
+
 
 
 
@@ -234,7 +258,13 @@ public class ArrList{
 
     // **************************************                         QUESTION 10    *************************************************************
     //10.Monotonic Array List or Not
-    System.out.println(Monotonic(list));
+    // System.out.println(Monotonic(list));
+
+
+    // **************************************                         QUESTION 11    *************************************************************
+    //11.Lonely Numebr or Not
+    //A numebr x is lonely if (x,x+1,x-1) does not exist in the array lsit , if exists it is not lonely
+    System.out.println(findLonely(list));
 
         
     }
