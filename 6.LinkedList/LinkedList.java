@@ -203,7 +203,7 @@ public class LinkedList {
     }
 
     //12.Find MId of Linekd lsit
-    public Node findMid(){
+    public Node findMid(Node head){
         Node slow=head;
         Node fast=head;
 
@@ -212,6 +212,38 @@ public class LinkedList {
             fast=fast.next.next;
         }
         return slow;
+    }
+
+    //13.Check if Linekd lsit is Palindrome or NOr
+    public boolean Palindrome(){
+        if(head==null || head.next==null){
+            return true;
+        }
+        Node mid = findMid(head);
+
+        Node prev=null;
+        Node curr = mid;
+        Node next;
+        while(curr!=null){
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+        Node right=prev;
+        Node left = head;
+
+
+        while(right!=null){
+            if(left.data!=right.data){
+                return false;
+            }
+            left=left.next;
+            right=right.next;
+        }
+        return true;
+
+        
     }
 
 
@@ -262,6 +294,8 @@ public class LinkedList {
         ll.Palindrome();
         //we will learn about slow fast concept
         //reverse half Linked list
+        //check if first ahlf =seconf half
+            //as right is null stop loop
 
         //FInding Mid of Linekd List
             /*Use slow and fast concept slow moves by1 and fast moves by 2 
@@ -269,7 +303,7 @@ public class LinkedList {
              if Odd -- fast.next == null and slow is mid
             */
         //13.Find MId of LInked list
-        ll.findMid();
+        ll.findMid(head);
 
 
 
