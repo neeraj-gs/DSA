@@ -81,6 +81,26 @@ public class LinkedList {
 
     }
 
+    //6.Remove first eleemnt in Linked list
+    public int removeFirst(){
+        if(size==0){
+            System.out.println("LL is Empty");
+            return Integer.MIN_VALUE;
+        }
+        if(size==1){
+            int val = head.data;
+            head=tail=null;
+            size=0;
+            return val;
+
+        }
+        int val = head.data;
+        head=head.next;
+        size--;
+        return val;
+
+    }
+
 
 
 
@@ -106,6 +126,10 @@ public class LinkedList {
 
         //5.Size of LL
         System.out.println(size);
+
+        //6.Remove OPerations
+        //removeFirst
+        ll.removeFirst();
 
 
 
