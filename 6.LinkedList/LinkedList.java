@@ -174,6 +174,33 @@ public class LinkedList {
 
     }
 
+    //11.Find and Remove Nth Node from end
+    public void removeNth(int n){
+        //size+1 -n //to get the nth numebr from last
+        //calcualte size
+        int s=0;
+        Node temp = head;
+        while(temp!=null){
+            temp=temp.next;
+            s++;
+        }
+
+        if(n==s){
+            head=head.next; //remove first
+            return;
+        }
+
+        int i=1;
+        int f=s-n;
+        Node prev=head;
+        while(i<f){
+            prev=prev.next;
+            i++;
+        }
+
+        prev.next=prev.next.next;
+        return;
+    }
 
 
 
@@ -216,6 +243,8 @@ public class LinkedList {
         //10.Reverse a Linked List
         ll.revLL();
 
+        //11.Find and Remve Nth node from end
+        ll.removeNth(2);
 
 
     }
