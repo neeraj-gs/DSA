@@ -17,11 +17,13 @@ public class LinkedList {
     }
     public static Node head;
     public static Node tail;
+    public static int size;
 
     //1.Add Ele to the first in LL
     public void addFirst(int data){
         //Create new node
         Node newNode = new Node(data);
+        size++;
 
         //if ll is emoty
         if(head==null){
@@ -37,6 +39,7 @@ public class LinkedList {
     public void addLast(int data){
         //Create new node
         Node newNode = new Node(data);
+        size++;
 
         //if ll is emoty
         if(head==null){
@@ -54,6 +57,8 @@ public class LinkedList {
             System.out.print(temp.data+"->");
             temp=temp.next;
         }
+        System.out.print("null");
+        System.out.println();
     }
 
     //4.Add element in the Middle
@@ -63,6 +68,7 @@ public class LinkedList {
             return;
         }
         Node newNode = new Node(data);
+        size++;
         Node temp=head;
         int i=0;
         while(temp!=null && i<index-1){
@@ -97,6 +103,9 @@ public class LinkedList {
         //4.Add in the Middle of Linked List
         ll.addMid(2,5); 
         ll.Printll();
+
+        //5.Size of LL
+        System.out.println(size);
 
 
 
