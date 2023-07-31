@@ -261,6 +261,34 @@ public class LinkedList {
     }
 
 
+    //15.Remove Cycle
+    public static void RemoveCycle(){
+        Node slow=head;
+        Node fast=head;
+        boolean cycle=false;
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+            if(slow==fast){
+                cycle=true;
+                break;
+            }
+        }if(cycle==false){return}
+
+        //meeting pint
+        slow=head;
+        Node prev=null;
+        while(slow!=fast){
+            prev = fast;
+            slow=slow.next;
+            fast=fast.next;
+        }
+
+        prev.next=null;
+
+    }
+
+
 
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
@@ -340,6 +368,7 @@ public class LinkedList {
             5.last node is prev of fast , last.next=null
 
         */
+        ll.RemoveCycle()
 
 
 
