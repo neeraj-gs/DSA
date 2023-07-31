@@ -330,6 +330,18 @@ public class LinkedList {
         ll.Cycle();
 
 
+        //15.Removing Cycle in Linked List
+        /*
+            1.Detect a Cycle
+            2.slow=head
+            3.slow=fast=+1
+            prevv=fast then fast +1
+            4.while(slow==fast) When they meet that is the point of cycle creation
+            5.last node is prev of fast , last.next=null
+
+        */
+
+
 
     }
     
