@@ -158,6 +158,22 @@ public class LinkedList {
         return helper(head, key);
     }
 
+    //10.Reverse a Linked list
+    public void revLL(){
+        Node prev=null;
+        Node curr = tail = head;
+        Node next;
+        while(curr!=null){
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+        head=prev;
+
+
+    }
+
 
 
 
@@ -196,6 +212,9 @@ public class LinkedList {
 
         //9.Recursive Search
         System.out.println(ll.recSearch(3));
+
+        //10.Reverse a Linked List
+        ll.revLL();
 
 
 
