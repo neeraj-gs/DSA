@@ -56,6 +56,25 @@ public class LinkedList {
         }
     }
 
+    //4.Add element in the Middle
+    public void addMid(int index,int data){
+        if(index==0){
+            addFirst(data);
+            return;
+        }
+        Node newNode = new Node(data);
+        Node temp=head;
+        int i=0;
+        while(temp!=null && i<index-1){
+            temp=temp.next;
+            i++;
+        }
+        newNode.next=temp.next;
+        temp.next=newNode;
+        
+
+    }
+
 
 
 
@@ -73,7 +92,12 @@ public class LinkedList {
         ll.addLast(4);
         
         //3.Print a LL
+        // ll.Printll();
+
+        //4.Add in the Middle of Linked List
+        ll.addMid(2,5); 
         ll.Printll();
+
 
 
     }
