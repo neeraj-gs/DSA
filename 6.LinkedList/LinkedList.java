@@ -246,6 +246,18 @@ public class LinkedList {
         //11.Find and Remve Nth node from end
         ll.removeNth(2);
 
+        //12.Check if a Linked List is a Palindrome or Not
+        ll.Palindrome();
+        //we will learn about slow fast concept
+        //reverse half Linked list
+
+        //FInding Mid of Linekd List
+            /*Use slow and fast concept slow moves by1 and fast moves by 2 
+             if Even -- fast==null and slow is mid
+             if Odd -- fast.next == null and slow is mid
+            */
+
+
 
     }
     
