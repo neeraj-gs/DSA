@@ -202,6 +202,18 @@ public class LinkedList {
         return;
     }
 
+    //12.Find MId of Linekd lsit
+    public Node findMid(){
+        Node slow=head;
+        Node fast=head;
+
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        return slow;
+    }
+
 
 
     public static void main(String[] args) {
@@ -256,6 +268,8 @@ public class LinkedList {
              if Even -- fast==null and slow is mid
              if Odd -- fast.next == null and slow is mid
             */
+        //13.Find MId of LInked list
+        ll.findMid();
 
 
 
