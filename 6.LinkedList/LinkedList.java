@@ -371,6 +371,17 @@ public class LinkedList {
         ll.RemoveCycle();
 
 
+        //16.Java Collection Frameworks For Linked List
+        //JAVA Colelction Frameworks
+        /*
+            it is a collection of data structures that is prestn so that we dont have to create linked list from start
+            Main Collection INterface
+                List interface and from which we have arraylist , stak ,linked list and vector
+                Set interface has Hashset and linkedhashset
+                
+        */
+
+
 
     }
     
