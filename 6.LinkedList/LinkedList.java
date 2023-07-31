@@ -125,6 +125,21 @@ public class LinkedList {
     }
 
 
+    //8.Iteratino Search in Linked List
+    public int iterSearch(int key){
+        Node temp=head;
+        int i=0;
+        while(temp!=null){
+            if(temp.data==key){
+                return i;
+            }
+            temp=temp.next;
+            i++;
+        }
+        return -1;
+    }
+
+
 
 
     public static void main(String[] args) {
@@ -152,10 +167,13 @@ public class LinkedList {
 
         //6.Remove OPerations
         //removeFirst
-        ll.removeFirst();
+        // ll.removeFirst();
 
         //7.Remove Last
-        ll.removeLast();
+        // ll.removeLast();
+
+        //8.Iterative Srarch
+        System.out.println(ll.iterSearch(2));
 
 
 
