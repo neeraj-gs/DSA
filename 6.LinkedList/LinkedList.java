@@ -378,9 +378,22 @@ public class LinkedList {
             Main Collection INterface
                 List interface and from which we have arraylist , stak ,linked list and vector
                 Set interface has Hashset and linkedhashset
-                
-        */
 
+        */
+        //Linked list in JCF 
+        /*
+         //create -have ot use objects
+         LinkedList<Integer> ll = new LinekdList<>();
+         ll.addLast(1)
+         ll.addFirst(0)  
+         0->1
+
+        //remove
+        ll.removeFirst();
+        ll.removeLast();
+
+
+        */
 
 
     }
