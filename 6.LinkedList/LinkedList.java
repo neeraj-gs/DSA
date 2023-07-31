@@ -139,6 +139,25 @@ public class LinkedList {
         return -1;
     }
 
+    //9.Recursive Search in Linked List
+    public int helper(Node head,int key){
+        if(head==null){
+            return -1;
+        }
+        if(head.data==key){
+            return 0;
+        }
+        int idx = helper(head.next, key);
+        if(idx==-1){
+            return -1;
+        }
+        return idx+1;
+
+    }
+    public int recSearch(int key){
+        return helper(head, key);
+    }
+
 
 
 
@@ -174,6 +193,9 @@ public class LinkedList {
 
         //8.Iterative Srarch
         System.out.println(ll.iterSearch(2));
+
+        //9.Recursive Search
+        System.out.println(ll.recSearch(3));
 
 
 
