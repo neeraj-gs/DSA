@@ -246,6 +246,20 @@ public class LinkedList {
         
     }
 
+    //14.Detect a Cycle in Linked List
+    public boolean Cycle(){
+        Node slow=head;
+        Node fast=head;
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+            if(slow==fast){
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 
     public static void main(String[] args) {
@@ -313,7 +327,7 @@ public class LinkedList {
              0 Moves --0 ,q move 1 gap between slow adn fast pinter
              if Meeting point between sloe and fast there exists a cycle
              */
-            
+        ll.Cycle();
 
 
 
