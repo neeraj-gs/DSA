@@ -262,7 +262,7 @@ public class LinkedList {
 
 
     //15.Remove Cycle
-    public static void RemoveCycle(){
+    public  void RemoveCycle(){
         Node slow=head;
         Node fast=head;
         boolean cycle=false;
@@ -273,7 +273,7 @@ public class LinkedList {
                 cycle=true;
                 break;
             }
-        }if(cycle==false){return}
+        }if(cycle==false){return;}
 
         //meeting pint
         slow=head;
@@ -368,7 +368,7 @@ public class LinkedList {
             5.last node is prev of fast , last.next=null
 
         */
-        ll.RemoveCycle()
+        ll.RemoveCycle();
 
 
 
