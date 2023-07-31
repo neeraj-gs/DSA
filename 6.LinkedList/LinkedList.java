@@ -306,6 +306,16 @@ public class LinkedList {
         ll.findMid(head);
 
 
+        //14.Detect a Loop/Cycle in a LL
+        //Loop - last node will Pint to some other node instead of null
+        //Floys Cycle finding Algorthm is used
+            /*We use Slow fast pointers 
+             0 Moves --0 ,q move 1 gap between slow adn fast pinter
+             if Meeting point between sloe and fast there exists a cycle
+             */
+            
+
+
 
     }
     
