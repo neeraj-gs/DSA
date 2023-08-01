@@ -588,6 +588,27 @@ public class LinkedList {
 
             }
 
+            public int removeLast(){
+                Node temp =head;
+                if(head==null){
+                    Syso(LL is empty)
+                }
+                if(size==1){
+                    int val=head.data
+                    head=tail=null
+                    return val;
+                }
+                Node temp =head;
+                while(temp.next.next!=null){
+                    temp=temp.next;
+                }
+                int val = temp.next.data;\
+                temp.next.prev=null;
+                tail=temp;
+                temp.next=null;
+                return val;
+            }
+
 
             }
 
