@@ -590,6 +590,10 @@ public class LinkedList {
                 }
             }
 
+            //21.Curcular Linked List
+            lastNode.next=head //onyl change in circualr linked list
+            
+
            
                 
             }
