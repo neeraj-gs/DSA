@@ -563,10 +563,35 @@ public class LinkedList {
                 if(head==null){
                     SYso(LL si empty)
                 }
+                if(size==1)  {
+                    head=tail=null;
+                    return val;
+                }
+
+                int val = head.data
                 head=head.next;
                 head.prev=null;
+                return val
 
 
+            }
+
+            //20. Reverse a Doubly Linked List
+            public void RevDll(){
+                Node curr=head;
+                Node prev=null;
+                Node next;
+                while(curr!=null){
+                    next=curr.next;
+                    curr.next=prev;
+                    curr.prev=next;
+                    prev=curr;
+                    curr=next;
+                }
+            }
+
+           
+                
             }
 
 
