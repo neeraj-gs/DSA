@@ -468,6 +468,23 @@ public class LinkedList {
         */
         // ll.mergeSort(head);
 
+
+        //18.Zig Zag Linked List
+        /*
+        Steps
+        1.FInd mid [mid=last nodeof 1st half]
+        2.Reverse 2nd Half of LL
+        3.alterante merging
+            NOde Lh=1st half head and rH=2nd half head
+            Node nextL and rnextR
+            while(lh!=null)
+            nextL=lH.next
+            lH.next=Rh
+            nextR=RH.next
+            Rh.next=nextL
+        4.Updateion rh=nextR
+        */
+
     }
     
 }
