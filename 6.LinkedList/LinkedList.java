@@ -288,6 +288,67 @@ public class LinkedList {
 
     }
 
+    //17.Merge Sort
+
+    public Node getMid(Node head){
+        Node slow=head;
+        Node fast=head.next;
+        // boolean cycle=false;
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        return slow;
+
+    }
+
+    private Node merge(Node head1,Node head2){
+        Node mergedLL = new Node(-1);
+        Node temp=mergedLL;
+        while(head1!=null &&head2!=null){
+            if(head1.data <= head2.data){
+                temp.next=head1;
+                head1=head1.next;
+                temp=temp.next;
+            }else{
+                temp.next=head2;
+                head2=head2.next;
+                temp=temp.next;
+            }
+        }
+        while(head1!=null){
+            temp.next=head1;
+                head1=head1.next;
+                temp=temp.next;
+
+        }
+        while(head2!=null){
+            temp.next=head2;
+                head2=head2.next;
+                temp=temp.next;
+        }
+
+        return mergedLL.next;
+    }
+
+
+    public Node mergeSort(Node head){
+        if(head==null && head.next==null){
+            return head;
+        }
+        //fidn mid
+        Node mid=getMid(head);
+
+        //left andd right ms
+        Node righthead=mid.next;
+        mid.next=null;
+        Node newLeft = mergeSort(head);
+        Node newRight=mergeSort(righthead);
+
+        //merge
+        return merge(newLeft,newRight);
+    }
+
 
 
     public static void main(String[] args) {
@@ -399,12 +460,13 @@ public class LinkedList {
         // O(nlogn) //divide and conquer
         /* 
         Steps: 
-        1.FIndMid ele [last node of first half]
+        1.FIndMid ele [last node of first half] -- fast=head.next [then we get mid as the last of 1st half]
         2.left ll and right ll and mid.next=null
         3.merge sort of left adn right
         4.merge
 
         */
+        // ll.mergeSort(head);
 
     }
     
