@@ -349,6 +349,49 @@ public class LinkedList {
         return merge(newLeft,newRight);
     }
 
+    //18.Zig Zag Linked List
+    public void ZigZag(){
+        //find mid
+        Node slow=head;
+        Node fast=head.next;
+        // boolean cycle=false;
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        Node mid=slow;
+
+        //rev 2nd half
+        Node curr=mid.next;
+        mid.next=null;
+        Node prev=null;
+        Node next;
+        while(curr!=null){
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+
+        Node left = head;
+        Node right = prev;
+
+        Node nextL,nextR;
+
+        //alt merge
+        while(left!=null&&right!=null){
+            nextL=left.next;
+            left.next=right;
+            nextR=right.next;
+            right.next=nextL;
+
+            left=nextL;
+            right=nextR;
+        }
+
+
+    }
+
 
 
     public static void main(String[] args) {
@@ -484,6 +527,7 @@ public class LinkedList {
             Rh.next=nextL
         4.Updateion rh=nextR
         */
+        ll.ZigZag();
 
     }
     
