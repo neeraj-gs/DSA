@@ -548,6 +548,19 @@ public class LinkedList {
             public static node head;
             public static node tail;
             public static int size;
+
+            public void addFirst(int data){
+                Node newNode= new Node(data);
+                if(head==null){
+                    head=tail=newNode
+                }
+                newNode.next = head;
+                head.prev=newNode;
+                head=newNode;
+            }
+
+
+
         }
 
         */
