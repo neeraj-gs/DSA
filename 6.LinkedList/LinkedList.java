@@ -559,6 +559,16 @@ public class LinkedList {
                 head=newNode;
             }
 
+            public int removeFirst(){
+                if(head==null){
+                    SYso(LL si empty)
+                }
+                head=head.next;
+                head.prev=null;
+
+
+            }
+
 
 
         }
