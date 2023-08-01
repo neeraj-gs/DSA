@@ -527,7 +527,30 @@ public class LinkedList {
             Rh.next=nextL
         4.Updateion rh=nextR
         */
-        ll.ZigZag();
+        // ll.ZigZag();
+
+
+        //19.Doubly Linked List
+        /*
+        In Node thre is a data,next,prev there are double way
+        //All the operations and code and logic is same as Linekd list
+
+        public class Node{
+            int data;
+            Node next;
+            Node prev;
+
+            public Node(int data){
+                this.data=fata;
+                this.next=null;
+                this.prev=null
+            }
+            public static node head;
+            public static node tail;
+            public static int size;
+        }
+
+        */
 
     }
     
