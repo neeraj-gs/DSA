@@ -395,6 +395,16 @@ public class LinkedList {
 
         */
 
+        //17.Merge Sort on Linked List
+        // O(nlogn) //divide and conquer
+        /* 
+        Steps: 
+        1.FIndMid ele [last node of first half]
+        2.left ll and right ll and mid.next=null
+        3.merge sort of left adn right
+        4.merge
+
+        */
 
     }
     
