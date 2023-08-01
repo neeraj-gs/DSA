@@ -573,8 +573,25 @@ public class LinkedList {
                 head.prev=null;
                 return val
 
+            public void addLast(){
+                Node newNode= new Node(data)
+                Node temp = head;
+                if(head==null){
+                    head=tail=newNode
+                }
+                while(temp.next!=null){
+                    temp=temp.next;
+                }
+                newNode.prev=temp;
+                temp.next=newNode;
+                newNode.next=null
 
             }
+
+
+            }
+
+
 
             //20. Reverse a Doubly Linked List
             public void RevDll(){
@@ -592,7 +609,7 @@ public class LinkedList {
 
             //21.Curcular Linked List
             lastNode.next=head //onyl change in circualr linked list
-            
+
 
            
                 
