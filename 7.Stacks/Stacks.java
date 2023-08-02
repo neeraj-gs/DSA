@@ -49,5 +49,9 @@ public class Stacks{
         s.push(3);
         
         //2.Printing in Stack
+        while(!isEmpty()){
+            System.out.println(s.peek());
+            // s.pop();
+        }
     }
 }
