@@ -96,10 +96,8 @@ public class Stacks{
 
     public static void main(String[] args) {
         //1.Implement Stack Using Array Lists
-        Stacks s = new Stacks();
-        s.push(1);
-        s.push(2);
-        s.push(3);
+        // Stacks s = new Stacks();
+        
         
         //2.Printing in Stack
         while(!isEmpty()){
@@ -108,6 +106,17 @@ public class Stacks{
         }
 
         //3.Implementation of Stack Using Linked List
+
+        //4.Java Colection FRameworks
+        Stack<Integer> s = new Stack<>();
+        s.push(1);
+        s.push(2);
+        s.push(3);
+        while(!isEmpty()){
+            System.out.println(s.peek());
+            // s.pop();
+        }
+
 
     }
 }
