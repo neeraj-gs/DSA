@@ -202,6 +202,34 @@ public class Stacks{
         }
     }
 
+    //11.Valid PArentheses
+    public static boolean isValid(String str){
+        Stack<Character> s = new Stack<>();
+
+        for(int i=0;i<str.length();i++){
+            char ch = str.charAt(i);
+            if(ch=='('||ch=='{'||ch=='['){
+                s.push(ch);
+            }else{
+                if(s.isEmpty()){
+                    return false;
+                }
+                //pair
+                if( (s.peek()=='('&&ch==')')||(s.peek()=='{'&&ch=='}')||(s.peek()=='['&&ch==']')){
+                    s.pop();
+
+                }else{
+                    return false;
+                }
+            }
+        }
+
+        if(s.isEmpty()){
+            return true;
+        }else{
+            return false;
+        }
+    }
     
 
     public static void main(String[] args) {
@@ -242,8 +270,8 @@ public class Stacks{
 
         //6. Reverse a String suing Stack
         //just add it and then remove it we get the elemens in reverse order
-        String str ="abc";
-        revString(str);
+        // String str ="abc";
+        // revString(str);
 
 
         //7.Reverse a Stack
@@ -300,8 +328,11 @@ public class Stacks{
             else it is not a valid parenthesis
         At end stack has to be empty then valid , if not not valid
 
-        
+
         */
+
+        String str = "({})[]";
+        isValid(str);
 
 
 
