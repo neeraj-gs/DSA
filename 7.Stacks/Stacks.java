@@ -155,6 +155,29 @@ public class Stacks{
         }
     }
 
+    //9.Next Greater Element Without Circulation fo Array
+    public static void nextGreaterEle(int arr[]){
+        int nge[] = new int[arr.length];
+        Stack<Integer> s = new Stack<>();
+        for(int i=2*arr.length-10;i>=0;i--){
+            while(!s.isEmpty() && s.peek()<=arr[i]){
+                s.pop();
+            }
+            if(i<arr.length){
+                if(!s.isEmpty()){
+                    nge[i] = s.peek();
+                }else{
+                    nge[i]=-1;
+                }
+            }
+            s.push(arr[i]);
+        }
+
+        for(int i=0;i<arr.length;i++){
+            System.out.println("The next greater Ele for "+arr[i]+" is "+nge[i]);
+        }
+    }
+
     
 
     public static void main(String[] args) {
@@ -182,10 +205,10 @@ public class Stacks{
 
 
         //5.Push at the Bottom of Stack
-        Stack<Integer> s =new Stack<>();
-        s.push(1);
-        s.push(2);
-        s.push(3);
+        // Stack<Integer> s =new Stack<>();
+        // s.push(1);
+        // s.push(2);
+        // s.push(3);
 
         // pushAtBottom(s,4);
         // while(!isEmpty()){
@@ -200,7 +223,7 @@ public class Stacks{
 
 
         //7.Reverse a Stack
-        revStack(s);
+        // revStack(s);
 
 
         //8.Stock Span Problem
@@ -221,9 +244,9 @@ public class Stacks{
 
 
         */
-        int stocks[] = {100,80,60,79,60,85,100};
-        int span[] = new int[stocks.length];
-        stockSpan(stocks,span);
+        // int stocks[] = {100,80,60,79,60,85,100};
+        // int span[] = new int[stocks.length];
+        // stockSpan(stocks,span);
 
         //9.Next greater Element
         //1st Variant No Circular 
@@ -233,13 +256,15 @@ public class Stacks{
             if there is an ele less than index -- pop 
             else tos is next greater elel of index and then  push index to stack
         */
+        int arr[] = {4,12,5,3,1,2,5,3,1,2,4,6};
+        nextGreaterEle(arr);
 
         //2nd Variant With Circulation
         /* 
         We need to check entire array in circular way
         Copy paste same array numbers then check from right we get the circulat answer
         to implement circular array -- (i%n) is the only one we have ot do it 
-        
+
         */
 
 
