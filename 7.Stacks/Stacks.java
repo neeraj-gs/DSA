@@ -15,7 +15,7 @@ Stack - Last in First Out
 
 */
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Stacks{
     // static ArrayList<Integer> list = new ArrayList<>();
@@ -92,6 +92,18 @@ public class Stacks{
         return head.data;
     }
 
+
+    //4.Push at bottom of Stack
+    public static void pushAtBottom(Stack<Integer> s,int data){
+        if(isEmpty()){
+            s.push(data);
+            return;
+        }
+        int top = s.pop();
+        pushAtBottom(s, data);
+        s.push(top);
+    }
+
     
 
     public static void main(String[] args) {
@@ -100,22 +112,36 @@ public class Stacks{
         
         
         //2.Printing in Stack
-        while(!isEmpty()){
-            System.out.println(s.peek());
-            // s.pop();
-        }
+        // while(!isEmpty()){
+        //     System.out.println(s.peek());
+        //     // s.pop();
+        // }
 
         //3.Implementation of Stack Using Linked List
 
         //4.Java Colection FRameworks
-        Stack<Integer> s = new Stack<>();
+        // Stack<Integer> s = new Stack<>();
+        // s.push(1);
+        // s.push(2);
+        // s.push(3);
+        // while(!isEmpty()){
+        //     System.out.println(s.peek());
+        //     // s.pop();
+        // }
+
+
+        //5.Push at the Bottom of Stack
+        Stack<Integer> s =new Stack<>();
         s.push(1);
         s.push(2);
         s.push(3);
+
+        pushAtBottom(s,4);
         while(!isEmpty()){
-            System.out.println(s.peek());
+            System.out.println(s.pop());
             // s.pop();
         }
+
 
 
     }
