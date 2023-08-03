@@ -225,6 +225,15 @@ public class Stacks{
         int span[] = new int[stocks.length];
         stockSpan(stocks,span);
 
+        //9.Next greater Element
+        //1st Variant No Circular 
+        /*An aray of n eleemnts is given we need ot find the next greater ele for all indeices
+        Define a stack , Iterate form last ele in array ,
+        check if there is any elemetns less tahtn index in stack ,
+            if there is an ele less than index -- pop 
+            else tos is next greater elel of index and then  push index to stack
+        */
+
 
 
 
