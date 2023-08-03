@@ -234,6 +234,14 @@ public class Stacks{
             else tos is next greater elel of index and then  push index to stack
         */
 
+        //2nd Variant With Circulation
+        /* 
+        We need to check entire array in circular way
+        Copy paste same array numbers then check from right we get the circulat answer
+        to implement circular array -- (i%n) is the only one we have ot do it 
+        
+        */
+
 
 
 
