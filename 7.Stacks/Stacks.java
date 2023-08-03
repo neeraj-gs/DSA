@@ -155,12 +155,36 @@ public class Stacks{
         }
     }
 
-    //9.Next Greater Element Without Circulation fo Array
+    // //9.Next Greater Element Without Circulation fo Array
+    // public static void nextGreaterEle(int arr[]){
+    //     int nge[] = new int[arr.length];
+    //     Stack<Integer> s = new Stack<>();
+    //     for(int i=2*arr.length-10;i>=0;i--){
+    //         while(!s.isEmpty() && s.peek()<=arr[i]){
+    //             s.pop();
+    //         }
+    //         if(i<arr.length){
+    //             if(!s.isEmpty()){
+    //                 nge[i] = s.peek();
+    //             }else{
+    //                 nge[i]=-1;
+    //             }
+    //         }
+    //         s.push(arr[i]);
+    //     }
+
+    //     for(int i=0;i<arr.length;i++){
+    //         System.out.println("The next greater Ele for "+arr[i]+" is "+nge[i]);
+    //     }
+    // }
+
+
+    //10.Next Greater Element Without Circulation fo Array
     public static void nextGreaterEle(int arr[]){
         int nge[] = new int[arr.length];
         Stack<Integer> s = new Stack<>();
         for(int i=2*arr.length-10;i>=0;i--){
-            while(!s.isEmpty() && s.peek()<=arr[i]){
+            while(!s.isEmpty() && s.peek()<=arr[i%arr.length]){
                 s.pop();
             }
             if(i<arr.length){
@@ -170,7 +194,7 @@ public class Stacks{
                     nge[i]=-1;
                 }
             }
-            s.push(arr[i]);
+            s.push(arr[i%arr.length]);
         }
 
         for(int i=0;i<arr.length;i++){
