@@ -182,6 +182,27 @@ public class Stacks{
         revStack(s);
 
 
+        //8.Stock Span Problem
+        //Maximum number of Consecutive days for which the price<= todays price
+        //need to find span , some bar cahrt wuth each day value is f=given
+        /*
+        To find span
+            1st day span is 1
+            fir next days , check curr and prev highest and prev highest is take
+        For a givven ele , check and calculate span of each elemtn
+            Span = index - prevHighindex
+
+            Approach:
+            In Stack we store index of Prev HIgh nad a span aray to store span
+            Pop all elemnts that is greater than curr index
+            push index after finding span , dont pop if prevhigh is grrater than curr
+            As stack is empty - span=i+1;
+
+
+        */
+
+
+
 
     }
 }
