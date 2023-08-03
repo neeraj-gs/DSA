@@ -122,6 +122,18 @@ public class Stacks{
         System.out.println(str);
     }
 
+    //7.Reverse a Stack
+    public static void revStack(Stack<Integer> s){
+        while(!s.isEmpty()){
+            return;
+        }
+
+        int top = s.pop();
+        revStack(s);
+        pushAtBottom(s,top);
+
+    }
+
     
 
     public static void main(String[] args) {
@@ -149,10 +161,10 @@ public class Stacks{
 
 
         //5.Push at the Bottom of Stack
-        // Stack<Integer> s =new Stack<>();
-        // s.push(1);
-        // s.push(2);
-        // s.push(3);
+        Stack<Integer> s =new Stack<>();
+        s.push(1);
+        s.push(2);
+        s.push(3);
 
         // pushAtBottom(s,4);
         // while(!isEmpty()){
@@ -164,6 +176,10 @@ public class Stacks{
         //just add it and then remove it we get the elemens in reverse order
         String str ="abc";
         revString(str);
+
+
+        //7.Reverse a Stack
+        revStack(s);
 
 
 
