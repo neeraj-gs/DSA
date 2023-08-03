@@ -104,6 +104,24 @@ public class Stacks{
         s.push(top);
     }
 
+    //6.Reverse  a string
+    public static void revString(String str){
+        Stack<Character> s = new Stack<>();
+        int i=0;
+        while(i<str.length()){
+            s.push(str.charAt(i));
+            i++;
+        }
+
+        StringBuilder res = new StringBuilder("");
+        while(!s.isEmpty()){
+            char curr=s.pop();
+            res.append(curr);
+        }
+        str = res.toString();
+        System.out.println(str);
+    }
+
     
 
     public static void main(String[] args) {
@@ -131,16 +149,21 @@ public class Stacks{
 
 
         //5.Push at the Bottom of Stack
-        Stack<Integer> s =new Stack<>();
-        s.push(1);
-        s.push(2);
-        s.push(3);
+        // Stack<Integer> s =new Stack<>();
+        // s.push(1);
+        // s.push(2);
+        // s.push(3);
 
-        pushAtBottom(s,4);
-        while(!isEmpty()){
-            System.out.println(s.pop());
-            // s.pop();
-        }
+        // pushAtBottom(s,4);
+        // while(!isEmpty()){
+        //     System.out.println(s.pop());
+        //     // s.pop();
+        // }
+
+        //6. Reverse a String suing Stack
+        //just add it and then remove it we get the elemens in reverse order
+        String str ="abc";
+        revString(str);
 
 
 
