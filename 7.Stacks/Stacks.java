@@ -291,6 +291,18 @@ public class Stacks{
 
         */
 
+        //11.Valid Parenthesis
+        /*
+        Define a Stack , Move in String from start to end
+        If Openig bracket - push on stack
+        if Closing bracket
+            if stack top is a pair then Pop it
+            else it is not a valid parenthesis
+        At end stack has to be empty then valid , if not not valid
+
+        
+        */
+
 
 
 
