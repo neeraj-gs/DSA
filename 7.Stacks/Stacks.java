@@ -383,6 +383,26 @@ public class Stacks{
         duplicate(str);
 
 
+        //13.Maximum area in A Histogram
+        /*Given an aray with Heights and widht is 1 , return are of hte largest rectangle in the histogram
+
+        Approach:
+        At each bar check how mauch aarea we can include when we create a reactangle with aht hefght
+        width diffrence between lef tnad right index
+
+        Area at an index -- h[i]*width
+        width = next smaller left - next smaller right -1
+        nextGreaterRight
+        nextSmaller - -reverse loop of next greater element
+        
+
+        
+        */
+
+
+
+
+
 
 
     }
