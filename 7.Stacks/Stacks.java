@@ -230,6 +230,38 @@ public class Stacks{
             return false;
         }
     }
+
+    // /12.Duplicate parentheiss
+    public static boolean duplicate(String str){
+        Stack<Character> s = new Stack<>();
+        for(int i=0;i<str.length();i++){
+            char ch = str.charAt(i);
+
+            //opeing,operator ,operands
+            
+            //clsing
+            if(ch==')'){
+                int c=0;
+                while(!s.isEmpty()&&s.peek()!='('){
+                    //if valid string no need to check emoty or not also
+                    s.pop();
+                    c++;
+                }
+                if(c<1){
+                    return true;
+                }else{
+                    s.pop();
+                }
+
+               
+            }
+             else{
+                    //openig condition
+                    s.push(ch);
+                }
+        }
+        return false;
+    }
     
 
     public static void main(String[] args) {
@@ -347,11 +379,8 @@ public class Stacks{
                 pair is matched and count++;
             if c<1 -- duplicate - return true
             I fno closing pair - pop
-            
-
-
-
         */
+        duplicate(str);
 
 
 
