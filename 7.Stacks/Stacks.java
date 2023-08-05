@@ -334,6 +334,25 @@ public class Stacks{
         String str = "({})[]";
         isValid(str);
 
+        //12.Duplicate Parenthesis
+        /*
+        Given a  Balanced Expression , find if it contains duplicate parentheses or not
+        A set of parentheses are duplicate if same subedpresion is surronded by multiple parenthesis
+
+        Approach:
+        Define a stack to keep track of brackets
+        count items between closing andopening id no items , no duplicate
+            Push Opening Brackets into stack
+            WHen we see a closing bracket , initialise count =0 and then count charecters till its p
+                pair is matched and count++;
+            if c<1 -- duplicate - return true
+            I fno closing pair - pop
+            
+
+
+
+        */
+
 
 
 
