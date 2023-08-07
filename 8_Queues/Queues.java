@@ -13,12 +13,35 @@ OPerations
 IMplementation of Queues
     1.Arrays -- fixed size(n) , remove-O(n) , we will not impleemtn queue using array
         We can implement Circular Queue using Arrays
-        
+
     2.Linked List 
     3.Stacks
 
 
 */
+
+public class Queues{
+
+    //1.Implementation of Queue usign Array
+    static int arr[];
+    static int size;
+    static int rear;
+    Queues(int n){
+        arr=new int[n];
+        size=n;
+        rear=-1;
+    }
+
+    //IsEmoty() Function to check if queue is empty or not
+    public static boolean isEmpty(){
+        return rear==-1;
+    }
+
+
+    public static void main(String[] args) {
+        
+    }
+}
 
 
 
