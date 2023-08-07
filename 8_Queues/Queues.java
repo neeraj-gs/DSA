@@ -238,24 +238,91 @@ public class Queues{
 import java.util.*;
 import java.util.LinkedList;
 public class Queues{
+
+    //5.IMplementaion of Queue usign 2 stacks
+  static class Queue{
+    static Stack<Integer> s1 = new Stack<>();
+    static Stack<Integer> s2 = new Stack<>();
+
+    public static boolean isEmpty(){
+        return s1.isEmpty();
+    }
+
+    //O(N)
+    public static void add(int data){
+        while(!s1.isEmpty()){
+            s2.push(s1.pop());
+        }
+        s1.push(data);
+
+        while(!s2.isEmpty()){
+            s1.push(s2.pop());
+        }
+    }
+
+    public static int remove(){
+        if(s1.isEmpty()){
+            System.out.println("Quwuw is Empty");
+            return -1;
+        }
+        return s1.pop();
+    }
+
+    //peek
+    public static int peek(){
+        if(s1.isEmpty()){
+            System.out.println("Quwuw is Empty");
+            return -1;
+        }
+        return s1.peek();
+    }
+
+
+  }  
+
+
+
     public static void main(String[] args) {
 
         //1.Queue implementation USing JCF
 
-        Queue<Integer> q= new LinkedList<>(); // We created as Linked list because queu is an interface
-        //We cant create objects of an interface
-        //to implemetn que we can implemetn it using arrayLDeque or Linked lIst fo rqueus
-        //No own obwjct o fqueue is possible
+        // Queue<Integer> q= new LinkedList<>(); // We created as Linked list because queu is an interface
+        // //We cant create objects of an interface
+        // //to implemetn que we can implemetn it using arrayLDeque or Linked lIst fo rqueus
+        // //No own obwjct o fqueue is possible
 
+        // q.add(1);
+        // q.add(2);
+        // q.add(3);
+
+
+        // while(!q.isEmpty()){
+        //     System.out.println(q.peek());
+        //     q.remove();
+        // }
+
+        //2.Queue using 2 stacks
+        /*
+        2 ways
+        1.Push can be made O(n) and remove and pop in O(1)
+        2.Pop & peek can be made O(n) and push using O(1)
+
+        1.Push - O(n)
+            Define 2 Stacks
+            Add Ele in s1 if empty , if  not empty transfer all ele from s1 to s2 , add ele on s1 and then transfer ele back to s1
+            Remove ele - -remove from s1
+        */
+        Queue q = new Queue();
         q.add(1);
         q.add(2);
         q.add(3);
-
 
         while(!q.isEmpty()){
             System.out.println(q.peek());
             q.remove();
         }
+
+
 
     }
 }
