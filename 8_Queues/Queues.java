@@ -37,6 +37,13 @@ public class Queues{
         return rear==-1;
     }
 
+    //add
+    public static void add(int data){
+        if(rear==size-1){ //ques is full or not
+
+        }
+    }
+
 
     public static void main(String[] args) {
         
