@@ -18,7 +18,7 @@ IMplementation of Queues
     3.Stacks
 
 
-*/
+
 
 public class Queues{
 
@@ -224,14 +224,28 @@ public class Queues{
                 Earlier we used to shift all ele front
             rear=(rear+1)%size
             front = (f+1)%size
-        */
+        
 
         //4.Queue using Linked List
 
         
     }
 }
+*/
 
+
+//IMPORTANT QUESTIONS
+import java.util.*;
+import java.util.LinkedList;
+public class Queues{
+    public static void main(String[] args) {
+        Queue<Integer> q= new LinkedList<>(); // We created as Linked list because queu is an interface
+        //We cant create objects of an interface
+        //to implemetn que we can implemetn it using arrayLDeque or Linked lIst fo rqueus
+        //No own obwjct o fqueue is possible
+        
+    }
+}
 
 
 
