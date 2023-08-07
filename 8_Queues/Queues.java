@@ -239,11 +239,24 @@ import java.util.*;
 import java.util.LinkedList;
 public class Queues{
     public static void main(String[] args) {
+
+        //1.Queue implementation USing JCF
+
         Queue<Integer> q= new LinkedList<>(); // We created as Linked list because queu is an interface
         //We cant create objects of an interface
         //to implemetn que we can implemetn it using arrayLDeque or Linked lIst fo rqueus
         //No own obwjct o fqueue is possible
-        
+
+        q.add(1);
+        q.add(2);
+        q.add(3);
+
+
+        while(!q.isEmpty()){
+            System.out.println(q.peek());
+            q.remove();
+        }
+
     }
 }
 
