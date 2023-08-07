@@ -82,6 +82,15 @@ public class Queues{
     public static void main(String[] args) {
         //Print Quwue
         printQueue();
+
+        //3.Circluar queue using Arrays
+        /*
+            Circular Queue
+            When we remove a ele from front , front becomes next ele
+                Earlier we used to shift all ele front
+            rear=(rear+1)%size
+            front = (f+1)%size
+        */
         
     }
 }
