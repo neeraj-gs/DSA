@@ -32,7 +32,7 @@ public class Queues{
         rear=-1;
     }
 
-    //IsEmoty() Function to check if queue is empty or not
+    //IsEmoty()  Function to check if queue is empty or not
     public static boolean isEmpty(){
         return rear==-1;
     }
