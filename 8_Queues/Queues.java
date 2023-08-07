@@ -47,6 +47,19 @@ public class Queues{
         arr[rear]=data;
     }
 
+    //remove
+    public static int remove(){
+        if(isEmpty()){
+            System.out.println("Empty Queue");
+            return -1;
+        }
+        int front = arr[0];
+        for(int i=0;i<arr.length;i++){
+            arr[i] = arr[i+1];
+        }
+        return front;
+    }
+
 
     public static void main(String[] args) {
         
