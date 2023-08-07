@@ -70,8 +70,18 @@ public class Queues{
         return arr[0];
     }
 
+    //Print Queue
+    public static void printQueue(){
+        while(!isEmpty()){
+            System.out.print(q.peek()+" ");
+            q.remove();
+        }
+    }
+
 
     public static void main(String[] args) {
+        //Print Quwue
+        printQueue();
         
     }
 }
