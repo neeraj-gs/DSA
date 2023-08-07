@@ -143,6 +143,62 @@ public class Queues{
     }
 
 
+    //4.Quee using Linked list
+    static class Node{
+        int data;
+        Node next;
+
+        Node(data){
+            this.data=data;
+            this.next=null;
+        }
+    }
+    
+    static Node head=null;
+    static Node tail = null;
+
+    public static boolean isEmpty(){
+        return head==null && tail==null;
+    }
+
+    //add
+    public static void add( int data){
+        Node newNode = new Node(data);
+        if(head==null){
+            head=tail=newNode;
+            return;
+        }
+        tail.next = newNode;
+        tail=newNode;
+    }
+
+    //reomve
+    public static int remove(){
+        if(isEmpty()){
+            System.out.println("Queue is Empty");
+            return -1;
+        }
+
+        int front=head;
+        if(head ==tail){
+            tail=head=null;
+        }else{
+            head = head.next;
+        }
+
+        return front;
+    }
+
+    //peek
+    public static int peek(){
+        if(isEmpty()){
+            System.out.println("Queue is Empty");
+            return -1;
+        }
+        return head.data;
+    }
+
+
 
 
 
@@ -169,6 +225,9 @@ public class Queues{
             rear=(rear+1)%size
             front = (f+1)%size
         */
+
+        //4.Queue using Linked List
+
         
     }
 }
