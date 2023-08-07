@@ -57,7 +57,17 @@ public class Queues{
         for(int i=0;i<arr.length;i++){
             arr[i] = arr[i+1];
         }
+        rear=rear-1;
         return front;
+    }
+
+    //peek
+    public static int peek(){
+        if(isEmpty()){
+            System.out.println("Empty");
+            return -1;
+        }
+        return arr[0];
     }
 
 
