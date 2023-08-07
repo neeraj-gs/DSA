@@ -95,26 +95,34 @@ public class Queues{
 
     //add
     public static void add(int data){
-        if(rear==size-1){ //ques is full or not
+        if(isFull()){ //ques is full or not
             System.out.println("Queue is Full");
         }
+        if(front==-1){
+            front =0;
+        }
 
-        rear=rear+1;
+        rear=(rear+1)%size;
         arr[rear]=data;
     }
 
-    //remove
+    // remove
     public static int remove(){
         if(isEmpty()){
             System.out.println("Empty Queue");
             return -1;
         }
-        int front = arr[0];
-        for(int i=0;i<arr.length;i++){
-            arr[i] = arr[i+1];
-        }
-        rear=rear-1;
-        return front;
+
+        int res = arr[front];
+
+        //if only one ele is present
+        if(rear==front){
+            rear=front=-1;
+        }else{
+
+        front= (front+1)&size;}
+
+        return res;
     }
 
     //peek
@@ -123,7 +131,7 @@ public class Queues{
             System.out.println("Empty");
             return -1;
         }
-        return arr[0];
+        return arr[front];
     }
 
     //Print Queue
