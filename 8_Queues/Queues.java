@@ -40,8 +40,11 @@ public class Queues{
     //add
     public static void add(int data){
         if(rear==size-1){ //ques is full or not
-
+            System.out.println("Queue is Full");
         }
+
+        rear=rear+1;
+        arr[rear]=data;
     }
 
 
