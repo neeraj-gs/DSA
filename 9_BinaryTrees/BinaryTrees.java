@@ -105,6 +105,16 @@ public class BinaryTrees {
             }
         }
 
+        //3.Height of a Tree
+        public static int height(Node root){
+            if(root==null){
+                return 0;
+            }
+            int lh = height(root.left);
+            int rh = height(root.right);
+            return Math.max(lh,rh) +1;
+        }
+
 
 
 
@@ -146,6 +156,14 @@ public class BinaryTrees {
         //in queue,Null poitns to new line , as we add a node send a null along with it
         //also agai remoe null and print next line and agin add back null
         tree.levelOrder(root);
+
+
+
+        //3.Height Of a Tree
+        //Maximum Distance between a root and a Leaf is called Height
+        //we need to calcualte child for a parent node 
+        //we  will calcuate lef tnad right sub trree and max of left,or roght +1 is the gethof tres
+        tree.height(root);
 
 
 
