@@ -115,6 +115,17 @@ public class BinaryTrees {
             return Math.max(lh,rh) +1;
         }
 
+        //4.Count the Number of Nodes
+        public static int count(Node root){
+            if(root==null){
+                return 0;
+            }
+            int lc=count(root.left);
+            int rc=count(root.right);
+            return lc+rc+1;
+        }
+
+
 
 
 
@@ -164,6 +175,11 @@ public class BinaryTrees {
         //we need to calcualte child for a parent node 
         //we  will calcuate lef tnad right sub trree and max of left,or roght +1 is the gethof tres
         tree.height(root);
+
+        //4.Count the Number of Nodes
+        //MOs to fthe questino is trees is solved using Recursion
+        //Each node goest ot its lef ta dn then right adn thenreturn tehcount
+        tree.count(root);
 
 
 
