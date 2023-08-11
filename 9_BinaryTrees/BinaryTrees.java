@@ -125,6 +125,17 @@ public class BinaryTrees {
             return lc+rc+1;
         }
 
+        //5.Sum of Nodes
+        public static int sum(Node root){
+            if(root==null){
+                return 0;
+            }
+            int ls = sum(root.left);
+            int rs = sum(root.right);
+            return ls+rs+root.data;
+        }
+
+
 
 
 
@@ -180,6 +191,11 @@ public class BinaryTrees {
         //MOs to fthe questino is trees is solved using Recursion
         //Each node goest ot its lef ta dn then right adn thenreturn tehcount
         tree.count(root);
+
+
+        //.Sum of Nodes
+        //Go to each node and calcualte the left tree suma dnntehnroght tree sum
+        tree.sum(root);
 
 
 
