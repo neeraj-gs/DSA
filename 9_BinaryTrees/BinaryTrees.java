@@ -198,6 +198,11 @@ public class BinaryTrees {
         tree.sum(root);
 
 
+        //6.Dimaeter of a Tree
+        //Diameter of a tree is the number of nides in the longest path between 2 leaves
+        
+
+
 
 
     }
