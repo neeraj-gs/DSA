@@ -93,17 +93,28 @@ public class BinaryTrees {
         //2.Traversals in a Tree
         //2a.PreOrder
         //Root-->Left-->Right
-        tree.preOrder(root);
+        // tree.preOrder(root);
 
         //2b.Inorder Traversal
         //Left-->Root-->Right
         //Trick: Point index up to the root adn traverse the first node we get
-        tree.inOrder(root);
+        // tree.inOrder(root);
 
         //2c.Post Order Traversal
         //Left-->Right-->Root
         // Tirck: Potin index finder to the opposite as root to the lef tnad thentraverse
-        tree.postOrder(root);
+        // tree.postOrder(root);
+
+
+        //2d.Level Order Traversal
+        //We print each level by level , we use DFS till now for above 
+        //we use a DS callled Queu to store teh eleemts
+        //We use BFS for level order
+        //We use Iterations 
+        //Add node into que and remove from que and print it and add its left and right child 
+        //repeat this process fo rall nodes
+        
+
 
 
 
