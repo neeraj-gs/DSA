@@ -64,6 +64,19 @@ public class BinaryTrees {
         }
 
 
+        //2c.Post Order Traversal
+        public static void postOrder(Node root){
+            if(root==null){
+                return;
+            }
+            postOrder(root.left);
+            postOrder(root.right); 
+            System.out.print(root.data+" ");
+                       
+        }
+
+
+
 
     }
 
@@ -86,6 +99,11 @@ public class BinaryTrees {
         //Left-->Root-->Right
         //Trick: Point index up to the root adn traverse the first node we get
         tree.inOrder(root);
+
+        //2c.Post Order Traversal
+        //Left-->Right-->Root
+        // Tirck: Potin index finder to the opposite as root to the lef tnad thentraverse
+        tree.postOrder(root);
 
 
 
