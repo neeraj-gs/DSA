@@ -240,45 +240,61 @@ import java.util.LinkedList;
 public class Queues{
 
     //5.IMplementaion of Queue usign 2 stacks
-  static class Queue{
-    static Stack<Integer> s1 = new Stack<>();
-    static Stack<Integer> s2 = new Stack<>();
+//   static class Queue{
+//     static Stack<Integer> s1 = new Stack<>();
+//     static Stack<Integer> s2 = new Stack<>();
+
+//     public static boolean isEmpty(){
+//         return s1.isEmpty();
+//     }
+
+//     //O(N)
+//     public static void add(int data){
+//         while(!s1.isEmpty()){
+//             s2.push(s1.pop());
+//         }
+//         s1.push(data);
+
+//         while(!s2.isEmpty()){
+//             s1.push(s2.pop());
+//         }
+//     }
+
+//     public static int remove(){
+//         if(s1.isEmpty()){
+//             System.out.println("Quwuw is Empty");
+//             return -1;
+//         }
+//         return s1.pop();
+//     }
+
+//     //peek
+//     public static int peek(){
+//         if(s1.isEmpty()){
+//             System.out.println("Quwuw is Empty");
+//             return -1;
+//         }
+//         return s1.peek();
+//     }
+
+
+//   }  
+
+  static class Stack{
+    Queue<Integer> q1 = new LinkedList<>();
+    Queue<Integer> q2 = new LinkedList<>();
 
     public static boolean isEmpty(){
-        return s1.isEmpty();
+        return q1.isEmpty() && q2.isEmpty();
     }
 
-    //O(N)
-    public static void add(int data){
-        while(!s1.isEmpty()){
-            s2.push(s1.pop());
-        }
-        s1.push(data);
-
-        while(!s2.isEmpty()){
-            s1.push(s2.pop());
-        }
-    }
-
-    public static int remove(){
-        if(s1.isEmpty()){
-            System.out.println("Quwuw is Empty");
-            return -1;
-        }
-        return s1.pop();
-    }
-
-    //peek
-    public static int peek(){
-        if(s1.isEmpty()){
-            System.out.println("Quwuw is Empty");
-            return -1;
-        }
-        return s1.peek();
+    public static void push(int data){
+        if(!q1.is)
     }
 
 
-  }  
+
+  }
 
 
 
@@ -330,10 +346,6 @@ public class Queues{
         push - push eleemnts into non-empty q1 , --O(1)
         pop - Transfer all eleement sfrom q1 to q2 till we have only 1 ele present , till we get top and return top
         no ned to trasfer back to another q
-        
-
-
-
         */
 
 
