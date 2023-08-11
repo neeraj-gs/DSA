@@ -53,6 +53,17 @@ public class BinaryTrees {
             preOrder(root.right);            
         }
 
+        //2b.Inorder Traversal
+        public static void inOrder(Node root){
+            if(root==null){
+                return;
+            }
+            inOrder(root.left);
+            System.out.print(root.data+" ");
+            inOrder(root.right);            
+        }
+
+
 
     }
 
@@ -70,6 +81,11 @@ public class BinaryTrees {
         //2a.PreOrder
         //Root-->Left-->Right
         tree.preOrder(root);
+
+        //2b.Inorder Traversal
+        //Left-->Root-->Right
+        //Trick: Point index up to the root adn traverse the first node we get
+        tree.inOrder(root);
 
 
 
