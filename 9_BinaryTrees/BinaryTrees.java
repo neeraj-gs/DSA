@@ -12,7 +12,8 @@ Sub Tree - Tre of a Specific node considering that node as a root[left and right
 
 
 */
-
+import java.util.*;
+import java.util.LinkedList;
 public class BinaryTrees {
     static class Node{
         int data;
@@ -75,6 +76,35 @@ public class BinaryTrees {
                        
         }
 
+        //2d.Level Order Traversal
+        public static void levelOrder(Node root){
+            if(root==null){
+                return;
+            }
+            Queue<Node> q= new LinkedList<>();
+            q.add(root);
+            q.add(null);
+            while(!q.isEmpty()){
+                Node curr=q.remove();
+                if(curr==null){
+                    System.out.println();
+                    if(q.isEmpty()){
+                        break;
+                    }else{
+                        q.add(null);
+                    }
+                }else{
+                    System.out.print(curr.data+" ");
+                    if(curr.left!=null){
+                        q.add(curr.left);
+                    }
+                    if(curr.right!=null){
+                        q.add(curr.right);
+                    }
+                }
+            }
+        }
+
 
 
 
@@ -113,7 +143,9 @@ public class BinaryTrees {
         //We use Iterations 
         //Add node into que and remove from que and print it and add its left and right child 
         //repeat this process fo rall nodes
-        
+        //in queue,Null poitns to new line , as we add a node send a null along with it
+        //also agai remoe null and print next line and agin add back null
+        tree.levelOrder(root);
 
 
 
