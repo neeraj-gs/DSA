@@ -322,6 +322,20 @@ public class Queues{
             q.remove();
         }
 
+        //3.Stack using 2 Queus
+        /*
+        2 ways push in O(n) or pop is O(n) and others need not require them
+        we will implemetn pop -o(n)
+
+        push - push eleemnts into non-empty q1 , --O(1)
+        pop - Transfer all eleement sfrom q1 to q2 till we have only 1 ele present , till we get top and return top
+        no ned to trasfer back to another q
+        
+
+
+
+        */
+
 
 
     }
