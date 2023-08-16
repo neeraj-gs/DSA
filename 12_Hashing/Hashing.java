@@ -48,7 +48,12 @@ public class Hashing{
         hm.put("India",100);
         hm.put("US",50);
 
-        System.out.println(hm);
+        System.out.println(hm); //we see it as object in type of key value pairs
+        //order is stored randomly in HashMaps
+        //O(1)
+
+        //Get
+        System.out.println(hm.get("US"));
         
     }
 }
