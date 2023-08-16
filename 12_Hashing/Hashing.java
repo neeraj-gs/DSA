@@ -64,6 +64,9 @@ public class Hashing{
         //pair is only removed
         System.out.println(hm.remove("India"));
 
+        //size
+        System.out.println(hm.size());
+
         
     }
 }
