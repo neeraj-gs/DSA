@@ -67,6 +67,10 @@ public class Hashing{
         //size
         System.out.println(hm.size());
 
+        //Is EMpty
+        //to check ifhashmap is empty or not
+            System.out.println(hm.isEmpty());
+
         
     }
 }
