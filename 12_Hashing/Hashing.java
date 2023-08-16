@@ -71,6 +71,10 @@ public class Hashing{
         //to check ifhashmap is empty or not
             System.out.println(hm.isEmpty());
 
+        //clear fucntion
+        //removes all the keys and hashmap is cleared
+        hm.clear();
+
         
     }
 }
