@@ -59,6 +59,11 @@ public class Hashing{
         //get gives teh value , contains geive true or false if we hav ethat key or not
         System.out.println(hm.containsKey("India"));
 
+        //remove
+        //if we pass some key , it finds the key and value and then removes it
+        //pair is only removed
+        System.out.println(hm.remove("India"));
+
         
     }
 }
