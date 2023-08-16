@@ -54,6 +54,11 @@ public class Hashing{
 
         //Get
         System.out.println(hm.get("US"));
+
+        //COntains key - checks if key exits or not
+        //get gives teh value , contains geive true or false if we hav ethat key or not
+        System.out.println(hm.containsKey("India"));
+
         
     }
 }
