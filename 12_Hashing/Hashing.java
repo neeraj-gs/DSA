@@ -18,6 +18,16 @@ Hasing in JAva
     3.TreeSet
 
 
+    HashMap
+        Used to store a table of information
+        (key,value) pairs
+        Each key is unique ][mian identifier]
+        When there is cahgne in value we can do it in key value pairs
+
+        Data table or nodes
     
+        insert ,Remove and Search -- O(1)
+        Eaxh key value is in form tabulation form
+        
 
 */
