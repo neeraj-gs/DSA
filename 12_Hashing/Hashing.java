@@ -28,6 +28,23 @@ Hasing in JAva
     
         insert ,Remove and Search -- O(1)
         Eaxh key value is in form tabulation form
+
+        Operations
+        1.put(key,value)
+            When we try to add an existing key , then it removes old value and updates the value
+
+
         
 
+
 */
+import java.util.*;
+public class Hashing{
+    public static void main(String[] args) {
+        // HashMap <key_type,Int_type> name = new HashMap<>(); //creation of  hashmaps
+        HashMap<String,Integer> hm = new HashMap<>();
+
+        
+        
+    }
+}
